@@ -1,0 +1,3 @@
+<IfModule mod_rewrite.c>
+    RewriteEgine On RewriteRule ^(.*)$ public/$1 [L]
+</IfModule>

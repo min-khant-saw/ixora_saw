@@ -18,11 +18,23 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/dashboard', function () {
-    return view('dashboard');
+Route::get('/home', function () {
+    return view('home');
 })
     ->middleware(['auth', 'verified'])
-    ->name('dashboard');
+    ->name('home');
+
+Route::get('/about', function () {
+    return view('about');
+})
+    ->middleware(['auth', 'verified'])
+    ->name('about');
+
+Route::get('/contacts', function () {
+    return view('contacts');
+})
+    ->middleware(['auth', 'verified'])
+    ->name('contacts');
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name(
