@@ -14,27 +14,17 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
-
 Route::get('/home', function () {
     return view('home');
-})
-    ->middleware(['auth', 'verified'])
-    ->name('home');
+})->name('home');
 
 Route::get('/about', function () {
     return view('about');
-})
-    ->middleware(['auth', 'verified'])
-    ->name('about');
+})->name('about');
 
 Route::get('/contacts', function () {
     return view('contacts');
-})
-    ->middleware(['auth', 'verified'])
-    ->name('contacts');
+})->name('contacts');
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name(
