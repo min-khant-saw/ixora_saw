@@ -26,13 +26,6 @@
                 {{ $slot }}
               
             </div>
-            @if (request()->routeIs('login'))
-            <div style="margin-left: 330px; margin-top: 12px">
-                <a class="underline text-sm text-gray-600 hover:text-gray-900 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500" href="{{ route('register') }}">
-                    {{ __('No Account Yet!') }}
-                </a>
-            </div>
-            @endif
         </div>
     </body>
 </html>
