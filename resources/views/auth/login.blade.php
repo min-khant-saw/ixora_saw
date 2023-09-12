@@ -32,18 +32,20 @@
             </label>
         </div>
 
-        <div class="flex items-center justify-end mt-4 gap-4">
-            @if (request()->routeIs('login'))
+        <div class="flex items-center justify-end mt-4">
+            <div class="flex justify-center" style="column-gap: 8px">
+                @if (request()->routeIs('login'))
                 <a class="underline text-sm text-gray-600 hover:text-gray-900 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500" href="{{ route('register') }}">
-                    {{ __('No Account Yet!') }}
+                    {{ __('Register!') }}
                 </a>
             @endif
             @if (Route::has('password.request'))
                 <a class="underline text-sm text-gray-600 hover:text-gray-900 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500" href="{{ route('password.request') }}">
-                    {{ __('Forgot your password?') }}
+                    {{ __('Forgot password?') }}
                 </a>
             @endif
 
+            </div>
 
             <x-primary-button class="ml-3">
                 {{ __('Log in') }}
