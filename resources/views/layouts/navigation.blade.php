@@ -104,9 +104,14 @@
             </div>
             @endauth
 
-            <div class="mt-3 space-y-1">
+            <div class="{{Auth::check()? "mt-3": "mt-auto"}} space-y-1">
                 <x-responsive-nav-link :href="Auth::check()? route('profile.edit'): route('login')">
+                    @auth
                     {{ __('Profile') }}
+                    @endauth
+                    @guest
+                    {{ __('Login') }}   
+                    @endguest
                 </x-responsive-nav-link>
 
                 <!-- Authentication -->
