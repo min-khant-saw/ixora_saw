@@ -2,7 +2,7 @@
     <!-- Primary Navigation Menu -->
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="flex justify-between h-16 w-full">
-            <div class="flex justify-between flex-1">
+            <div class="flex justify-between">
                 <!-- Logo -->
                 <div class="shrink-0 flex items-center">
                     <a href="{{ route('home') }}" style="width: 11rem">
@@ -10,32 +10,33 @@
                     </a>
                 </div>
 
-                <!-- Navigation Links -->
-                <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex h-full">
-                    <x-nav-link :href="route('home')" :active="request()->routeIs('home')">
-                        {{ __('Home') }}
-                    </x-nav-link>
-                    <x-nav-link :href="route('about')" :active="request()->routeIs('about')">
-                        {{ __('About') }}
-                    </x-nav-link>
+            </div>
+            <!-- Navigation Links -->
+            <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex h-full">
+                <x-nav-link :href="route('home')" :active="request()->routeIs('home')">
+                    {{ __('Home') }}
+                </x-nav-link>
+                <x-nav-link :href="route('about')" :active="request()->routeIs('about')">
+                    {{ __('About') }}
+                </x-nav-link>
 
-                    <x-nav-link :href="route('contacts')" :active="request()->routeIs('contacts')">
-                        {{ __('Contacts') }}
-                    </x-nav-link>
-                    @guest
-                        <div class="flex justify-between items-center flex-row overflow-hidden">
-                            <a href="{{route('login')}}" class="p-2 bg-gray-800 text-white font-semibold {{request()->routeIs('login') ? "bg-red-600": "bg-gray-800"}}">Login</a>
-                            <a href="{{route('register')}}" class="p-2 bg-gray-800 text-white font-semibold {{request()->routeIs('register')?"bg-red-600": "bg-gray-800"}}">Register</a>
-                        </div>
-                    @endguest
-                </div>
+                <x-nav-link :href="route('contacts')" :active="request()->routeIs('contacts')">
+                    {{ __('Contacts') }}
+                </x-nav-link>
             </div>
 
-            @auth
+     
 
 <!-- Settings Dropdown -->
-<div class="hidden sm:flex sm:items-center sm:ml-6 ml-4">
-    <x-dropdown align="left" width="48">
+<div class="hidden sm:flex sm:items-center sm:ml-6">
+    <a href="{{Auth::check() ? route('profile.edit') : route('login')}}">
+        @if (request()->routeIs('profile.edit'))
+        <i class="fa-solid fa-user text-xl" style="color: #51411f;"></i>
+        @else
+        <i class="fa-regular fa-user text-xl"></i>
+        @endif
+    </a>
+        {{-- <x-dropdown align="left" width="48">
         <x-slot name="trigger">
             <button class="inline-flex items-center px-3 py-2 border border-transparent text-sm leading-4 font-medium rounded-md text-gray-500 hover:text-gray-700 focus:outline-none transition ease-in-out duration-150" style="background-color: #EBEADF">
                 <div class="p-2">{{ Auth::user()->name }}</div>
@@ -64,9 +65,9 @@
                 </x-dropdown-link>
             </form>
         </x-slot>
-    </x-dropdown>
+    </x-dropdown> --}}
 </div>
-            @endauth
+       
 
             <!-- Hamburger -->
             <div class="-mr-2 flex items-center sm:hidden">
@@ -108,7 +109,7 @@
                 </x-responsive-nav-link>
 
                 <!-- Authentication -->
-                <form method="POST" action="{{ route('logout') }}">
+                {{-- <form method="POST" action="{{ route('logout') }}">
                     @csrf
 
                     <x-responsive-nav-link :href="route('logout')"
@@ -116,7 +117,7 @@
                                         this.closest('form').submit();">
                         {{ __('Log Out') }}
                     </x-responsive-nav-link>
-                </form>
+                </form> --}}
             </div>
         </div>
         @endauth

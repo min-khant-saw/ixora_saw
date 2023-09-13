@@ -1,4 +1,4 @@
-<x-app-layout>
+<x-app-guest-layout>
     <x-slot name="header">
         <h2 class="font-normal text-xl text-white leading-tight text-center">
             {{ __('Free shipping over $50') }}
@@ -14,4 +14,4 @@
             </div>
         </div>
     </div>
-</x-app-layout>
+</x-app-guest-layout>

@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Guest\LandingController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 
@@ -14,17 +15,21 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/home', function () {
-    return view('home');
-})->name('home');
+Route::prefix('/')->group(function () {
+    // Route::get('/', [LandingController::class, 'index'])->name('landing');
 
-Route::get('/about', function () {
-    return view('about');
-})->name('about');
+    Route::get('/', function () {
+        return view('home');
+    })->name('home');
 
-Route::get('/contacts', function () {
-    return view('contacts');
-})->name('contacts');
+    Route::get('/about', function () {
+        return view('about');
+    })->name('about');
+
+    Route::get('/contacts', function () {
+        return view('contacts');
+    })->name('contacts');
+});
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name(
