@@ -104,14 +104,16 @@
             </div>
             @endauth
 
-            <div class="{{Auth::check()? "mt-3": "mt-auto"}} space-y-1">
-                <x-responsive-nav-link :href="Auth::check()? route('profile.edit'): route('login')">
-                    @auth
-                    {{ __('Profile') }}
-                    @endauth
-                    @guest
-                    {{ __('Login') }}   
-                    @endguest
+            @guest
+            <x-responsive-nav-link :href="route('login')" :active="request()->routeIs('login')">
+                {{ __('Login') }}
+            </x-responsive-nav-link>
+            @endguest
+
+            @auth
+            <div class="mt-3 space-y-1">
+                <x-responsive-nav-link :href="route('profile.edit')">
+                    {{ __('Profile') }}                    
                 </x-responsive-nav-link>
 
                 <!-- Authentication -->
@@ -125,6 +127,8 @@
                     </x-responsive-nav-link>
                 </form> --}}
             </div>
+            @endauth
+
         </div>
     </div>
 </nav>
