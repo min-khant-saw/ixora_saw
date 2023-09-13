@@ -1,4 +1,4 @@
-<nav x-data="{ open: false }" class="border-b border-gray-100" style="position: sticky; left: 0; top: 0; background-color: #EBEADF">
+<nav x-data="{ open: false }" class="border-b border-gray-100 bg-white" style="position: sticky; left: 0; top: 0;">
     <!-- Primary Navigation Menu -->
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="flex justify-between h-16 w-full">
@@ -10,19 +10,76 @@
                     </a>
                 </div>
 
-            </div>
-            <!-- Navigation Links -->
-            <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex h-full">
-                <x-nav-link :href="route('home')" :active="request()->routeIs('home')">
-                    {{ __('Home') }}
-                </x-nav-link>
-                <x-nav-link :href="route('about')" :active="request()->routeIs('about')">
-                    {{ __('About') }}
-                </x-nav-link>
+                <!-- Navigation Links -->
+                <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex ">
+                    <x-nav-link :href="route('home')" :active="request()->routeIs('home')">
+                        {{ __('Home') }}
+                    </x-nav-link>
+                    {{-- <x-nav-link :href="route('about')" :active="request()->routeIs('about')">
+                        {{ __('Fashion') }}
+                    </x-nav-link> --}}
+                    {{-- <x-nav-link :href="route('about')" :active="request()->routeIs('about')">
+                        {{ __('Shop') }}
+                    </x-nav-link> --}}
+                    {{-- <x-nav-link :href="route('about')" :active="request()->routeIs('about')">
+                        {{ __('Home Decor') }}
+                    </x-nav-link> --}}
+                    
 
-                <x-nav-link :href="route('contacts')" :active="request()->routeIs('contacts')">
-                    {{ __('Contacts') }}
-                </x-nav-link>
+
+
+
+
+
+                    <x-dropdown align="left" width="48">
+                        <x-slot name="trigger">
+                            <button class="inline-flex items-center border border-transparent text-sm leading-4 font-medium rounded-md text-gray-500 hover:text-gray-700 focus:outline-none transition ease-in-out duration-150 bg-white" style="padding-top: 17px">
+                                <div class="py-2">Shop</div>
+                
+                                <div class="ml-1">
+                                    <svg class="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+                                        <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
+                                    </svg>
+                                </div>
+                            </button>
+                        </x-slot>
+                
+                        <x-slot name="content">
+                            <x-dropdown-link :href="route('fashion')">
+                                {{ __('Fashion') }}
+                            </x-dropdown-link>
+                            <x-dropdown-link :href="route('accessories')">
+                                {{ __('Accessories') }}
+                            </x-dropdown-link>
+                            <x-dropdown-link :href="route('homeDecor')">
+                                {{ __('Home Decor') }}
+                            </x-dropdown-link>
+                
+                            {{-- <!-- Authentication -->
+                            <form method="POST" action="{{ route('logout') }}">
+                                @csrf
+                
+                                <x-dropdown-link :href="route('logout')"
+                                        onclick="event.preventDefault();
+                                                    this.closest('form').submit();">
+                                    {{ __('Log Out') }}
+                                </x-dropdown-link>
+                            </form> --}}
+                        </x-slot>
+                    </x-dropdown>
+
+
+
+
+
+                    
+                    <x-nav-link :href="route('about')" :active="request()->routeIs('about')">
+                        {{ __('Blog') }}
+                    </x-nav-link>
+                    <x-nav-link :href="route('contacts')" :active="request()->routeIs('contacts')">
+                        {{ __('Contacts') }}
+                    </x-nav-link>
+                </div>
             </div>
 
      
@@ -31,41 +88,12 @@
 <div class="hidden sm:flex sm:items-center sm:ml-6">
     <a href="{{Auth::check() ? route('profile.edit') : route('login')}}">
         @if (request()->routeIs('profile.edit'))
-        <i class="fa-solid fa-user text-xl" style="color: #51411f;"></i>
+        <i class="fa-solid fa-user text-xl"></i>
         @else
         <i class="fa-regular fa-user text-xl"></i>
         @endif
     </a>
-        {{-- <x-dropdown align="left" width="48">
-        <x-slot name="trigger">
-            <button class="inline-flex items-center px-3 py-2 border border-transparent text-sm leading-4 font-medium rounded-md text-gray-500 hover:text-gray-700 focus:outline-none transition ease-in-out duration-150" style="background-color: #EBEADF">
-                <div class="p-2">{{ Auth::user()->name }}</div>
-
-                <div class="ml-1">
-                    <svg class="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
-                        <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
-                    </svg>
-                </div>
-            </button>
-        </x-slot>
-
-        <x-slot name="content">
-            <x-dropdown-link :href="route('profile.edit')">
-                {{ __('Profile') }}
-            </x-dropdown-link>
-
-            <!-- Authentication -->
-            <form method="POST" action="{{ route('logout') }}">
-                @csrf
-
-                <x-dropdown-link :href="route('logout')"
-                        onclick="event.preventDefault();
-                                    this.closest('form').submit();">
-                    {{ __('Log Out') }}
-                </x-dropdown-link>
-            </form>
-        </x-slot>
-    </x-dropdown> --}}
+        
 </div>
        
 
@@ -87,6 +115,35 @@
             <x-responsive-nav-link :href="route('home')" :active="request()->routeIs('home')">
                 {{ __('Home') }}
             </x-responsive-nav-link>
+           
+                <div class="block w-full pl-3 pr-4 py-2 border-l-4 border-transparent text-left text-base font-medium text-gray-600 hover:text-gray-800 hover:bg-gray-50 hover:border-gray-300 focus:outline-none focus:text-gray-800 focus:bg-gray-50 focus:border-gray-300 transition duration-150 ease-in-out">
+                    <x-dropdown align="left" width="48">
+                        <x-slot name="trigger">
+                            <button class="inline-flex items-center border border-transparent leading-4 font-medium rounded-md text-gray-500 hover:text-gray-700 focus:outline-none transition ease-in-out duration-150 bg-white">
+                                <div>Shop</div>
+                
+                                <div class="ml-1">
+                                    <svg class="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+                                        <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
+                                    </svg>
+                                </div>
+                            </button>
+                        </x-slot>
+                
+                        <x-slot name="content">
+                            <x-dropdown-link :href="route('fashion')">
+                                {{ __('Fashion') }}
+                            </x-dropdown-link>
+                            <x-dropdown-link :href="route('accessories')">
+                                {{ __('Accessories') }}
+                            </x-dropdown-link>
+                            <x-dropdown-link :href="route('homeDecor')">
+                                {{ __('Home Decor') }}
+                            </x-dropdown-link>
+                        </x-slot>
+                    </x-dropdown>
+                </div>
+          
             <x-responsive-nav-link :href="route('about')" :active="request()->routeIs('about')">
                 {{ __('About') }}
             </x-responsive-nav-link>
