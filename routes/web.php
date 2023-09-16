@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Auth\LogoutController;
 use App\Http\Controllers\Guest\LandingController;
 use App\Http\Controllers\Product\ProductController;
 use App\Http\Controllers\ProfileController;
@@ -52,6 +53,7 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name(
         'profile.destroy'
     );
+    Route::post('/logout', [LogoutController::class, 'logout'])->name('logout');
 });
 
 require __DIR__ . '/auth.php';
