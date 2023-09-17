@@ -44,25 +44,26 @@ swiper-slide img {
         height: 130px !important;
     } */
 
-    .category {
+    /* .category {
         font-size: 20px !important;
-    }
+    } */
 
     .head-container {
-        width: 90% !important;
+        width: 95% !important;
+        /* padding: 10px !important; */
     }
 
     .head-image {
         width: 100%;
-        height: 200px !important;
+        height: 300px !important;
         object-fit: cover;
         object-position: right;
     }
 
     .btn {
         padding: 5px !important;
-        font-size: 10px !important;
-        margin: 15px !important;
+        font-size: 15px !important;
+        margin: 20px !important;
         margin-left: 24px !important;
         height: max-content !important;
         position: absolute;
@@ -81,12 +82,12 @@ swiper-slide img {
         /* padding: 5px; */
         font-size: 12px !important;
     }
-    .shop-now {
+    /* .shop-now {
         font-size: 10px !important;
     }
     .category-head {
         font-size: 14px !important;
-    }
+    } */
 }
 .banner {
     padding: 10px;
