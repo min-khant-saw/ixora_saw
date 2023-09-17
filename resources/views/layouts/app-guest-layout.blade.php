@@ -41,6 +41,8 @@
   margin: 15px !important;
   margin-left: 24px !important;
   height: max-content !important;
+  position: absolute;
+  bottom: 0px
 }
     .banner{
       padding: 4px !important;
