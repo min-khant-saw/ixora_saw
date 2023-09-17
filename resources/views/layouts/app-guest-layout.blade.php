@@ -26,6 +26,21 @@
       width: 100%;
       height: 170px;
     }
+
+
+    .head-image{
+  width: 100%;
+  height: 170px !important;
+  object-fit: cover;
+  object-position: right;
+}
+
+.btn{
+  padding: 5px !important;
+  font-size: 10px !important;
+  margin: 15px !important;
+  margin-left: 24px !important
+}
     .banner{
       padding: 4px !important;
       height: 40px;
@@ -51,6 +66,13 @@
 .banner span{
   /* padding: 5px; */
   font-size: 17px
+}
+
+.head-image{
+  width: 100%;
+  height: 370px;
+  object-fit: cover;
+  object-position: left;
 }
 
 </style>

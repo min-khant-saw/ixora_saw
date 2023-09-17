@@ -287,7 +287,6 @@
                 </form>
                 --}}
             </div>
-            @endauth
             <x-responsive-nav-link :href="route('profile.edit')">
 <div class="flex items-center gap-3">
     <span>
@@ -297,6 +296,7 @@
                     </span>
 </div>
             </x-responsive-nav-link>
+            @endauth
         </div>
     </div>
 </nav>
