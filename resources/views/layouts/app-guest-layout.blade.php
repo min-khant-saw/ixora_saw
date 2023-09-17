@@ -1,7 +1,5 @@
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
-@extends('header.html-header')
-<link rel="stylesheet" href="{{asset("style.css")}}">
-
+@include('header.html-header')
 <body>
     @include('layouts.navigation')
     <div class="w-full text-center flex justify-center items-center banner" style="background-color: black;">
