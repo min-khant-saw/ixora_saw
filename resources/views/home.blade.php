@@ -31,7 +31,7 @@
 
         <h1 class="text-center text-2xl font-semibold category" style="font-size: 30px; margin: 15px auto">Category</h1>
 
-        <div class="w-full flex justify-center items-center mt-2" style="gap: 15px; padding: 4px">
+        <div class="w-full flex justify-center items-center mt-2" style="gap: 15px; padding: auto 10px">
 
 
             <div class="relative overflow-hidden fashion">
