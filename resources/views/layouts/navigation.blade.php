@@ -143,7 +143,7 @@
                     </span>
                     @endif
                 </a>
-                <a class="items" href="" style="margin-left: 1rem; transition: all .2s ease">
+                <a class="items" href="{{route('cart')}}" style="margin-left: 1rem; transition: all .2s ease">
                     <span class="material-symbols-rounded text-2xl">
                         shopping_bag
                     </span>
