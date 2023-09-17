@@ -57,7 +57,7 @@ swiper-slide img {
         width: 100%;
         height: 300px !important;
         object-fit: cover;
-        object-position: right;
+        object-position: left;
     }
 
     .btn {
