@@ -76,6 +76,11 @@
   object-position: left;
 }
 
+.btn{
+  position: absolute;
+  bottom: 0px
+}
+
 </style>
 @extends('header.html-header')
 <body>

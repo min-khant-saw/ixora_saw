@@ -10,7 +10,7 @@
    
                 <img class="head-image" src="https://icms-image.slatic.net/images/ims-web/3e7d967d-d9bd-4013-8152-9237dea60cae.jpg" alt="" srcset="">
     
-                <div class="absolute flex justify-start flex-row items-end" style="width: 50%; top: 0px; left: 0px; height: 100%; background: linear-gradient(to left, rgba(0, 0, 0, 0.029),rgba(0, 0, 0, 0.067),rgba(0, 0, 0, 0.166),rgba(0, 0, 0, 0.363),rgba(3, 0, 0, 0.851));
+                <div class="absolute " style="width: 50%; top: 0px; left: 0px; height: 100%; background: linear-gradient(to left, rgba(0, 0, 0, 0.029),rgba(0, 0, 0, 0.067),rgba(0, 0, 0, 0.166),rgba(0, 0, 0, 0.363),rgba(3, 0, 0, 0.851));
                 ">
                 <button class="bg-white p-2 font-semibold rounded btn" style="margin: 30px; margin-left: 50px">Shop Now</button>
     
