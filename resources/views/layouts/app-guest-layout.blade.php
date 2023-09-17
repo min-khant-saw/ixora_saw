@@ -39,7 +39,8 @@
   padding: 5px !important;
   font-size: 10px !important;
   margin: 15px !important;
-  margin-left: 24px !important
+  margin-left: 24px !important;
+  height: max-content !important;
 }
     .banner{
       padding: 4px !important;
