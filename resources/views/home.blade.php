@@ -7,7 +7,7 @@
 
     <div class="py-10 min-h-screen">
    
-                    <swiper-container class="mySwiper w-full border" pagination="true" pagination-clickable="true" navigation="true" space-between="30"
+                    <swiper-container class="mySwiper w-full border" pagination="true" pagination-clickable="true" space-between="30"
                     centered-slides="true" autoplay-delay="5500" autoplay-disable-on-interaction="false">
 
                         <swiper-slide>
