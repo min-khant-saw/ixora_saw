@@ -1,6 +1,6 @@
 <nav
     x-data="{ open: false }"
-    class="border-b border-gray-100 bg-white"
+    class="border-b border-gray-100 bg-white z-50"
     style="position: sticky; left: 0; top: 0"
 >
     <!-- Primary Navigation Menu -->
