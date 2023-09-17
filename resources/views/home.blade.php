@@ -7,6 +7,7 @@
 
         @include('pages.components.header')
         @include('pages.components.category')
+        @include('pages.components.new-product')
 
     <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-element-bundle.min.js"></script>
 
