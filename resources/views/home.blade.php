@@ -6,7 +6,7 @@
     </x-slot> --}}
 
     <div class="w-full py-2 flex justify-center items-center">
-            <div class="relative" style="width: 80%">
+            <div class="relative head-container" style="width: 80%">
    
                 <img class="head-image" src="https://icms-image.slatic.net/images/ims-web/3e7d967d-d9bd-4013-8152-9237dea60cae.jpg" alt="" srcset="">
     
