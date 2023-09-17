@@ -2,7 +2,7 @@
 <style>
     swiper-container {
       width: 100%;
-      height: 500px;
+      height: 400px;
     }
 
     swiper-slide {
@@ -24,15 +24,41 @@
     @media only screen and (max-width: 600px) {
         swiper-container {
       width: 100%;
-      height: 200px;
+      height: 170px;
     }
+    .banner{
+      padding: 4px !important;
+      height: 40px;
+    }
+    .banner a{
+  padding: 5px !important;
+  font-size: 12px !important;
 }
+
+.banner span{
+  /* padding: 5px; */
+  font-size: 12px !important;
+}
+}
+.banner{
+  padding: 10px
+}
+.banner a{
+  padding: 5px;
+  font-size: 18px
+}
+
+.banner span{
+  /* padding: 5px; */
+  font-size: 17px
+}
+
 </style>
 @extends('header.html-header')
 <body>
     @include('layouts.navigation')
-    <div class="w-full text-center flex justify-center items-center" style="padding: 12px; background-color: #F7EF3E;">
-        <span class="text-lg" style="color: red; font-weight: 600;">Only for sale 75$ </span> <a href="" class="bg-red-600 p-2 text-lg rounded text-white font-semibold ml-3" style="border: 2px">Buy Now !</a>
+    <div class="w-full text-center flex justify-center items-center banner" style="background-color: black;">
+        <span class="" style="color: white; font-weight: 600;">Only for sale 75$ </span> <a href="" class="rounded font-semibold ml-3" style="border: 2px; background-color: white; color: black">Buy Now <span class="">!</span></a>
     </div>
     <div>
         {{ $slot }}
