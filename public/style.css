@@ -19,7 +19,7 @@ swiper-slide img {
     object-fit: cover;
     object-position: center;
 }
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 640px) {
     .category-container {
         display: block !important;
     }
@@ -88,6 +88,13 @@ swiper-slide img {
     .category-head {
         font-size: 14px !important;
     } */
+    .card-container {
+        align-items: center !important;
+        flex-direction: column !important;
+    }
+    .product {
+        margin: 2rem auto;
+    }
 }
 .banner {
     padding: 10px;
@@ -122,7 +129,7 @@ swiper-slide img {
     gap: 5px !important;
     cursor: pointer;
 }
-.add-cart {
+/* .add-cart {
     position: relative;
     cursor: pointer;
 }
@@ -143,6 +150,5 @@ swiper-slide img {
 }
 
 .add-cart:hover::after {
-    /* Remove the extra .add-cart class */
     transform: scaleX(1);
-}
+} */

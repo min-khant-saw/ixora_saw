@@ -6,31 +6,62 @@
 </h1>
 
 <div class="" style="width: 90%; margin: auto">
-    <div>
+    <div class="flex justify-center card-container w-full" style="gap: 25px;">
         
 
 
-    <div class="relative overflow-hidden rounded" style="width: 300px; height: 400px;">
-        <div style="width: 100%; height: 400px;">
-            <img class="w-full" style="object-fit: cover; height: 100%" src="https://preview.colorlib.com/theme/timezone/assets/img/gallery/new_product3.png.webp" alt="" srcset="" />
-        </div>
-        <div class="absolute left-0 p-2 font-semibold" style="bottom: 0; background-color: rgba(0, 0, 0, 0.444);">
-            <div class="flex flex-col">
-                <p class="text-white">
-                    Skin harmony  Face Scrubs undefined Exfoliator
-Skin harmony Face Scrubs & Exfoliator
-                </p>
-                <span class="text-xl" style="color: red; font-weight: 900; margin: 9px 0">$999</span>
+    <div class="relative rounded product" style="width: 320px; height: 320px;">
+           <a href="">
+            <div class="relative" style="width: 100%; height: 100%;">
+                <img class="w-full" style="object-fit: cover; height: 100%" src="https://preview.colorlib.com/theme/timezone/assets/img/gallery/new_product3.png.webp" alt="" srcset="" />
             </div>
-            <div class="border p-2 flex justify-center items-center rounded add-cart" style="border-color: red;">
-                <span class="material-symbols-rounded text-white z-10">
-                    shopping_cart
-                    </span>
-                <span class="text-white z-10">Add to cart</span>
+            <div class="flex justify-center items-center flex-col mt-1 text-center">
+                <p class="text-base text-gray-500">Accessories</p>
+                <h1 class="text-xl">Men Watch</h1>
+                <p class="text-lg text-gray-600 font-semibold">199$</p>
             </div>
-        </div>
+           </a>
     </div>
 
 
+    <div class="relative rounded product" style="width: 320px; height: 320px;">
+        <a href="">
+         <div class="relative" style="width: 100%; height: 100%;">
+             <img class="w-full" style="object-fit: cover; height: 100%" src="https://prestashop.eoscosmetic.com/at_movic_elementor/103-home_default/mug-the-adventure-begins.jpg" alt="" srcset="" />
+         </div>
+         <div class="flex justify-center items-center flex-col mt-1 text-center">
+             <p class="text-base text-gray-500">Fashion</p>
+             <h1 class="text-xl">Sleeveless Ribbed Short Dress Black</h1>
+             <p class="text-lg text-gray-600 font-semibold">199$</p>
+         </div>
+        </a>
     </div>
+
+    <div class="relative rounded product" style="width: 320px; height: 320px;">
+        <a href="">
+         <div class="relative" style="width: 100%; height: 100%;">
+             <img class="w-full" style="object-fit: cover; height: 100%" src="https://preview.colorlib.com/theme/timezone/assets/img/gallery/new_product3.png.webp" alt="" srcset="" />
+         </div>
+         <div class="flex justify-center items-center flex-col mt-1 text-center">
+             <p class="text-base text-gray-500">Accessories</p>
+             <h1 class="text-xl">Men Watch</h1>
+             <p class="text-lg text-gray-600 font-semibold">199$</p>
+         </div>
+        </a>
+ </div>
+
+ <div class="relative rounded product" style="width: 320px; height: 320px;">
+    <a href="">
+     <div class="relative" style="width: 100%; height: 100%;">
+         <img class="w-full" style="object-fit: cover; height: 100%" src="https://prestashop.eoscosmetic.com/at_movic_elementor/115-home_default/brown-bear-cushion.jpg" alt="" srcset="" />
+     </div>
+     <div class="flex justify-center items-center flex-col mt-1 text-center">
+         <p class="text-base text-gray-500">Fashion</p>
+         <h1 class="text-xl">Pouch Pocket Hoodie Orange</h1>
+         <p class="text-lg text-gray-600 font-semibold">199$</p>
+     </div>
+    </a>
+</div>
+
+</div>
 </div>
