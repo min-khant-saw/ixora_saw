@@ -1,3 +1,5 @@
+<div style="margin: 150px auto">
+
     <x-home-header title="Latest Products"/>
 
 
@@ -13,3 +15,6 @@
         <x-product image="https://prestashop.eoscosmetic.com/at_movic_elementor/115-home_default/brown-bear-cushion.jpg"/>
 
     </x-product-container>
+
+</div>
+</div>

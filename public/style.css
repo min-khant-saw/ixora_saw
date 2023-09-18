@@ -88,14 +88,19 @@ swiper-slide img {
     .category-head {
         font-size: 14px !important;
     } */
+}
+
+@media (max-width: 920px) {
     .card-container {
         align-items: center !important;
-        flex-direction: column !important;
+        /* flex-direction: column !important; */
+        flex-wrap: wrap;
     }
     .product {
         margin: 2rem auto;
     }
 }
+
 .banner {
     padding: 10px;
 }
