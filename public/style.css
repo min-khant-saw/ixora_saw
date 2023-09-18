@@ -129,26 +129,11 @@ swiper-slide img {
     gap: 5px !important;
     cursor: pointer;
 }
-/* .add-cart {
-    position: relative;
-    cursor: pointer;
+
+.product-header {
+    transition: color 0.2s ease-in;
 }
 
-.add-cart::after {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: red;
-    color: white;
-    width: 100%;
-    height: 100%;
-    transition: all 0.4s ease-in-out;
-    transform: scaleX(0);
+.product:hover .product-header {
+    color: red;
 }
-
-.add-cart:hover::after {
-    transform: scaleX(1);
-} */

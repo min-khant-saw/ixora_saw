@@ -1,4 +1,4 @@
-<h1 class="text-center text-2xl font-semibold" style="font-size: 30px; margin: 20px auto; margin-top: 30px">Categorys</h1>
+<x-home-header title="Categorys"/>
 
 <div class="w-full flex justify-center items-center mt-2 category-container" style="gap: 15px;">
 
