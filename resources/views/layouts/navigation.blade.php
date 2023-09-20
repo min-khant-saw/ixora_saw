@@ -43,15 +43,15 @@
                     />
                 </a>
             </div>
+            <!-- Logo -->
+            <div class="shrink-0 items-center hidden sm:flex">
+                <a href="{{ route('home') }}" style="width: 11rem">
+                    <x-application-logo
+                        class="block fill-current text-gray-800"
+                    />
+                </a>
+            </div>
             <div class="flex justify-between" style="">
-                <!-- Logo -->
-                <div class="shrink-0 items-center hidden sm:flex">
-                    <a href="{{ route('home') }}" style="width: 11rem">
-                        <x-application-logo
-                            class="block fill-current text-gray-800"
-                        />
-                    </a>
-                </div>
 
                 <!-- Navigation Links -->
                 <div class="hidden space-x-8 sm:-my-px sm:flex" style="margin-left: 30px">
