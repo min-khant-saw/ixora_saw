@@ -58,6 +58,7 @@
                     <x-nav-link
                         :href="route('home')"
                         :active="request()->routeIs('home')"
+                        style="font-size: 1rem"
                     >
                         {{ __("Home") }}
                     </x-nav-link>
@@ -65,6 +66,7 @@
                     <x-nav-link
                         :href="route('fashion')"
                         :active="request()->routeIs('fashion')"
+                        style="font-size: 1rem"
                     >
                         {{ __("Fashion") }}
                     </x-nav-link>
@@ -72,6 +74,7 @@
                     <x-nav-link
                     :href="route('accessories')"
                     :active="request()->routeIs('accessories')"
+                    style="font-size: 1rem"
                 >
                     {{ __("Acessories") }}
                 </x-nav-link>
@@ -79,13 +82,15 @@
                     <x-nav-link
                         :href="route('homeDecor')"
                         :active="request()->routeIs('homeDecor')"
+                        style="font-size: 1rem"
                     >
                         {{ __("Home Decor") }}
                     </x-nav-link>
 
                     <x-nav-link
                     :href="route('homeDecor')"
-                    :active="request()->routeIs('homeDecor')">
+                    :active="request()->routeIs('homeDecor')"
+                    style="font-size: 1rem">
 
                         {{__("Education")}}
                     </x-nav-link>
@@ -94,6 +99,7 @@
                     <x-nav-link
                         :href="route('about')"
                         :active="request()->routeIs('about')"
+                        style="font-size: 1rem"
                     >
                         {{ __("About") }}
                     </x-nav-link>
@@ -101,12 +107,14 @@
                     <x-nav-link
 :href="route('about')"
 :active="request()->routeIs('about')"
+style="font-size: 1rem"
 >
 {{ __("Sale") }}
 </x-nav-link>
                     <x-nav-link
                         :href="route('contacts')"
                         :active="request()->routeIs('contacts')"
+                        style="font-size: 1rem"
                     >
                         {{ __("Contacts") }}
                     </x-nav-link>
