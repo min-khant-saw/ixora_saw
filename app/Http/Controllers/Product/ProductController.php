@@ -23,4 +23,12 @@ class ProductController extends Controller
     {
         return view('pages.home-decor');
     }
+    public function education()
+    {
+        return view('pages.education');
+    }
+    public function sale()
+    {
+        return view('pages.sale');
+    }
 }

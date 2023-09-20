@@ -36,7 +36,10 @@
                     </svg>
                 </button>
             </div>
-            <div class="shrink-0 items-center ipad-nav-icon" style="margin-left: 3rem">
+            <div
+                class="shrink-0 items-center ipad-nav-icon"
+                style="margin-left: 3rem"
+            >
                 <a href="{{ route('home') }}" style="width: 8rem">
                     <x-application-logo
                         class="block fill-current text-gray-800"
@@ -52,9 +55,11 @@
                 </a>
             </div>
             <div class="flex justify-between desktop-nav" style="">
-
                 <!-- Navigation Links -->
-                <div class="hidden space-x-8 sm:-my-px sm:flex" style="margin-left: 30px">
+                <div
+                    class="hidden space-x-8 sm:-my-px sm:flex"
+                    style="margin-left: 30px"
+                >
                     <x-nav-link
                         :href="route('home')"
                         :active="request()->routeIs('home')"
@@ -62,7 +67,7 @@
                     >
                         {{ __("Home") }}
                     </x-nav-link>
-         
+
                     <x-nav-link
                         :href="route('fashion')"
                         :active="request()->routeIs('fashion')"
@@ -72,13 +77,13 @@
                     </x-nav-link>
 
                     <x-nav-link
-                    :href="route('accessories')"
-                    :active="request()->routeIs('accessories')"
-                    style="font-size: 1rem"
-                >
-                    {{ __("Acessories") }}
-                </x-nav-link>
-            
+                        :href="route('accessories')"
+                        :active="request()->routeIs('accessories')"
+                        style="font-size: 1rem"
+                    >
+                        {{ __("Acessories") }}
+                    </x-nav-link>
+
                     <x-nav-link
                         :href="route('homeDecor')"
                         :active="request()->routeIs('homeDecor')"
@@ -88,13 +93,12 @@
                     </x-nav-link>
 
                     <x-nav-link
-                    :href="route('homeDecor')"
-                    :active="request()->routeIs('homeDecor')"
-                    style="font-size: 1rem">
-
-                        {{__("Education")}}
+                        :href="route('education')"
+                        :active="request()->routeIs('education')"
+                        style="font-size: 1rem"
+                    >
+                        {{ __("Education") }}
                     </x-nav-link>
-                    
 
                     <x-nav-link
                         :href="route('about')"
@@ -105,12 +109,12 @@
                     </x-nav-link>
 
                     <x-nav-link
-:href="route('about')"
-:active="request()->routeIs('about')"
-style="font-size: 1rem"
->
-{{ __("Sale") }}
-</x-nav-link>
+                        :href="route('sale')"
+                        :active="request()->routeIs('sale')"
+                        style="font-size: 1rem"
+                    >
+                        {{ __("Sale") }}
+                    </x-nav-link>
                     <x-nav-link
                         :href="route('contacts')"
                         :active="request()->routeIs('contacts')"
@@ -123,23 +127,48 @@ style="font-size: 1rem"
 
             <!-- Settings Dropdown -->
             <div class="flex items-center ml-6 relative">
-                <div class="absolute right-0 flex justify-between gap-2 bg-white search-container" style="visibility: hidden; padding-right: 10px; opacity: 0; transition: all .2s ease">
+                <div
+                    class="absolute right-0 flex justify-between gap-2 bg-white search-container"
+                    style="
+                        visibility: hidden;
+                        padding-right: 10px;
+                        opacity: 0;
+                        transition: all 0.2s ease;
+                    "
+                >
                     <div class="relative flex">
-                        <input type="text" class="rounded h-9 bg-slate-400">
-                        <div class="absolute right-0 mr-9 h-full close-search" style="margin-top: 6px; cursor: pointer">
-                            <span class="material-symbols-rounded text-xl" style="color: darkslategray">
+                        <input type="text" class="rounded h-9 bg-slate-400" />
+                        <div
+                            class="absolute right-0 mr-9 h-full close-search"
+                            style="margin-top: 6px; cursor: pointer"
+                        >
+                            <span
+                                class="material-symbols-rounded text-xl"
+                                style="color: darkslategray"
+                            >
                                 close
                             </span>
                         </div>
                     </div>
                 </div>
-                <span class="items" style="margin-right: 0.9rem; cursor: pointer; user-select: none; transition: all .2s ease"
-                    ><span class="material-symbols-rounded text-2xl mt-[2px] search">
+                <span
+                    class="items"
+                    style="
+                        margin-right: 0.9rem;
+                        cursor: pointer;
+                        user-select: none;
+                        transition: all 0.2s ease;
+                    "
+                    ><span
+                        class="material-symbols-rounded text-2xl mt-[2px] search"
+                    >
                         search
                     </span></span
                 >
 
-                <a class="items" style="transition: all .2s ease"
+                <a
+                    class="items"
+                    style="transition: all 0.2s ease"
                     href="{{Auth::check() ? route('profile.edit') : route('login')}}"
                 >
                     @if (request()->routeIs('profile.edit'))
@@ -150,7 +179,11 @@ style="font-size: 1rem"
                     </span>
                     @endif
                 </a>
-                <a class="items" href="{{route('cart')}}" style="margin-left: 1rem; transition: all .2s ease">
+                <a
+                    class="items"
+                    href="{{ route('cart') }}"
+                    style="margin-left: 1rem; transition: all 0.2s ease"
+                >
                     <span class="material-symbols-rounded text-2xl">
                         shopping_bag
                     </span>
@@ -158,7 +191,6 @@ style="font-size: 1rem"
             </div>
 
             <!-- Hamburger -->
-            
         </div>
     </div>
 
@@ -173,46 +205,45 @@ style="font-size: 1rem"
             </x-responsive-nav-link>
 
             <x-responsive-nav-link
-            :href="route('fashion')"
-            :active="request()->routeIs('fashion')"
-        >
-            {{ __("Fashion") }}
-        </x-responsive-nav-link>
+                :href="route('fashion')"
+                :active="request()->routeIs('fashion')"
+            >
+                {{ __("Fashion") }}
+            </x-responsive-nav-link>
 
-        <x-responsive-nav-link
-        :href="route('accessories')"
-        :active="request()->routeIs('accessories')"
-    >
-        {{ __("Accessories") }}
-    </x-responsive-nav-link>
+            <x-responsive-nav-link
+                :href="route('accessories')"
+                :active="request()->routeIs('accessories')"
+            >
+                {{ __("Accessories") }}
+            </x-responsive-nav-link>
 
+            <x-responsive-nav-link
+                :href="route('homeDecor')"
+                :active="request()->routeIs('homeDecor')"
+            >
+                {{ __("Home Decor") }}
+            </x-responsive-nav-link>
 
-    <x-responsive-nav-link
-    :href="route('homeDecor')"
-    :active="request()->routeIs('homeDecor')"
->
-    {{ __("Home Decor") }}
-</x-responsive-nav-link>
+            <x-responsive-nav-link
+                :href="route('education')"
+                :active="request()->routeIs('education')"
+            >
+                {{ __("Education") }}
+            </x-responsive-nav-link>
 
-<x-responsive-nav-link
-:href="route('homeDecor')"
-:active="request()->routeIs('homeDecor')">
-
-    {{__("Education")}}
-</x-responsive-nav-link>
-
-<x-responsive-nav-link
-:href="route('about')"
-:active="request()->routeIs('about')"
->
-{{ __("About") }}
-</x-responsive-nav-link>
-<x-responsive-nav-link
-:href="route('about')"
-:active="request()->routeIs('about')"
->
-{{ __("Sale") }}
-</x-responsive-nav-link>
+            <x-responsive-nav-link
+                :href="route('about')"
+                :active="request()->routeIs('about')"
+            >
+                {{ __("About") }}
+            </x-responsive-nav-link>
+            <x-responsive-nav-link
+                :href="route('sale')"
+                :active="request()->routeIs('sale')"
+            >
+                {{ __("Sale") }}
+            </x-responsive-nav-link>
             <x-responsive-nav-link
                 :href="route('contacts')"
                 :active="request()->routeIs('contacts')"
@@ -222,7 +253,11 @@ style="font-size: 1rem"
         </div>
 
         <!-- Responsive Settings Options -->
-        {{-- <div class="pt-4 pb-1 border-t border-gray-200" style="margin-block: 10px">
+        {{--
+        <div
+            class="pt-4 pb-1 border-t border-gray-200"
+            style="margin-block: 10px"
+        >
             @auth
             <div class="px-4">
                 <div class="font-medium text-base text-gray-800">
@@ -240,6 +275,7 @@ style="font-size: 1rem"
                 {{ __("Login") }}
             </x-responsive-nav-link>
             @endguest
-        </div> --}}
+        </div>
+        --}}
     </div>
 </nav>

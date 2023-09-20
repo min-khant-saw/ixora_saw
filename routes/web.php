@@ -41,6 +41,8 @@ Route::prefix('/product')->group(function () {
         Route::get('/fashion', 'fashion')->name('fashion');
         Route::get('/accessories', 'accessories')->name('accessories');
         Route::get('/home-decor', 'homeDecor')->name('homeDecor');
+        Route::get('/education', 'education')->name('education');
+        Route::get('/sale', 'sale')->name('sale');
     });
 });
 
