@@ -44,14 +44,14 @@
                 </a>
             </div>
             <!-- Logo -->
-            <div class="shrink-0 items-center hidden sm:flex">
+            <div class="shrink-0 items-center hidden sm:flex desktop-nav">
                 <a href="{{ route('home') }}" style="width: 11rem">
                     <x-application-logo
                         class="block fill-current text-gray-800"
                     />
                 </a>
             </div>
-            <div class="flex justify-between" style="">
+            <div class="flex justify-between desktop-nav" style="">
 
                 <!-- Navigation Links -->
                 <div class="hidden space-x-8 sm:-my-px sm:flex" style="margin-left: 30px">
@@ -82,14 +82,28 @@
                     >
                         {{ __("Home Decor") }}
                     </x-nav-link>
+
+                    <x-nav-link
+                    :href="route('homeDecor')"
+                    :active="request()->routeIs('homeDecor')">
+
+                        {{__("Education")}}
+                    </x-nav-link>
                     
 
                     <x-nav-link
                         :href="route('about')"
                         :active="request()->routeIs('about')"
                     >
-                        {{ __("Blog") }}
+                        {{ __("About") }}
                     </x-nav-link>
+
+                    <x-nav-link
+:href="route('about')"
+:active="request()->routeIs('about')"
+>
+{{ __("Sale") }}
+</x-nav-link>
                     <x-nav-link
                         :href="route('contacts')"
                         :active="request()->routeIs('contacts')"
@@ -141,7 +155,7 @@
     </div>
 
     <!-- Responsive Navigation Menu -->
-    <div :class="{'block': open, 'hidden': ! open}" class="hidden sm:hidden">
+    <div class="nav-mobile">
         <div class="pt-2 pb-3 space-y-1 flex flex-col" style="row-gap: 8px">
             <x-responsive-nav-link
                 :href="route('home')"
@@ -170,6 +184,13 @@
     :active="request()->routeIs('homeDecor')"
 >
     {{ __("Home Decor") }}
+</x-responsive-nav-link>
+
+<x-responsive-nav-link
+:href="route('homeDecor')"
+:active="request()->routeIs('homeDecor')">
+
+    {{__("Education")}}
 </x-responsive-nav-link>
 
 <x-responsive-nav-link
