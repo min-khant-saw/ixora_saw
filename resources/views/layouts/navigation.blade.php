@@ -257,7 +257,7 @@
     <div class="relative">
         <div class="w-full flex justify-center absolute top-0" style="margin: 2px auto; transition: all .4s ease-in-out">
             <div class="flex search-bar justify-center items-center" style="width: 80%; overflow: hidden; background-color: black">
-                <div class="w-full relative flex justify-between items-center">
+                <div class="w-full relative flex justify-between items-center p-2">
                     <input type="text" class="h-9 w-full text-white text-xl search-input" placeholder="Search Anything..." style="border-color: transparent; outline: transparent; box-shadow: unset; transition: all .4s ease-in-out; background-color: transparent" />
                 <div
                     class="h-full close-search mt-2"
