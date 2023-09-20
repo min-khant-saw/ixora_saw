@@ -38,16 +38,22 @@
             </div>
             <div class="flex justify-between" style="margin-left: 17px">
                 <!-- Logo -->
-                <div class="shrink-0 items-center hidden sm:flex ipad-nav-icon">
+                <div class="shrink-0 items-center hidden sm:flex">
                     <a href="{{ route('home') }}" style="width: 11rem">
                         <x-application-logo
                             class="block fill-current text-gray-800"
                         />
                     </a>
                 </div>
-
+                <div class="shrink-0 items-center flex" style="margin-left: 2rem">
+                    <a href="{{ route('home') }}" style="width: 10rem">
+                        <x-application-logo
+                            class="block fill-current text-gray-800"
+                        />
+                    </a>
+                </div>
                 <!-- Navigation Links -->
-                <div class="hidden space-x-8 sm:-my-px sm:flex ipad-nac-text" style="margin-left: 30px">
+                <div class="hidden space-x-8 sm:-my-px sm:flex" style="margin-left: 30px">
                     <x-nav-link
                         :href="route('home')"
                         :active="request()->routeIs('home')"
@@ -66,7 +72,7 @@
                     :href="route('accessories')"
                     :active="request()->routeIs('accessories')"
                 >
-                    {{ __("Accessories") }}
+                    {{ __("Acessories") }}
                 </x-nav-link>
             
                     <x-nav-link
@@ -135,13 +141,6 @@
 
     <!-- Responsive Navigation Menu -->
     <div :class="{'block': open, 'hidden': ! open}" class="hidden sm:hidden">
-        <div class="shrink-0 items-center flex" style="margin-left: 20px">
-            <a href="{{ route('home') }}" style="width: 11rem">
-                <x-application-logo
-                    class="block fill-current text-gray-800"
-                />
-            </a>
-        </div>
         <div class="pt-2 pb-3 space-y-1 flex flex-col" style="row-gap: 8px">
             <x-responsive-nav-link
                 :href="route('home')"
