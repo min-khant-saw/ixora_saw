@@ -101,15 +101,6 @@ swiper-slide img {
     }
 }
 
-@media (max-width: 940px) {
-    .ipad-nav-icon {
-        display: none !important;
-    }
-    .ipad-nac-text {
-        margin-left: 0px !important;
-    }
-}
-
 @media (max-width: 1024px) {
     .desktop-nav {
         display: none !important;
@@ -120,6 +111,12 @@ swiper-slide img {
     }
     .nav-mobile {
         display: block;
+    }
+    .ipad-nav-icon {
+        display: none !important;
+    }
+    .ipad-nac-text {
+        margin-left: 0px !important;
     }
 }
 
