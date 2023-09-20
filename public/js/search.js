@@ -10,7 +10,8 @@ searchIcon.addEventListener("click", () => {
         e.classList.add("opacity-0");
         e.style.visibility = "hidden";
     });
-    ipadNavIcon.style.display = "none";
+    ipadNavIcon.style.visibility = "hidden";
+    ipadNavIcon.style.opacity = "0";
     searchContainer.style.visibility = "visible";
     searchContainer.style.opacity = "1";
 });
@@ -20,7 +21,8 @@ searchClose.addEventListener("click", () => {
         e.classList.add("opacity-100");
         e.style.visibility = "visible";
     });
-    ipadNavIcon.style.display = "flex";
+    ipadNavIcon.style.visibility = "visible";
+    ipadNavIcon.style.opacity = "1";
     searchContainer.style.opacity = "0";
     searchContainer.style.visibility = "hidden";
 });
