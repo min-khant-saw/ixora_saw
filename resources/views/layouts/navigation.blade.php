@@ -45,7 +45,7 @@
                         />
                     </a>
                 </div>
-                <div class="shrink-0 items-center flex" style="">
+                <div class="shrink-0 items-center flex" style="margin-right: 2rem">
                     <a href="{{ route('home') }}" style="width: 10rem">
                         <x-application-logo
                             class="block fill-current text-gray-800"
