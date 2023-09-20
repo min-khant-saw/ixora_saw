@@ -36,8 +36,8 @@
                     </svg>
                 </button>
             </div>
-            <div class="shrink-0 items-center flex sm:hidden" style="margin-left: 5rem">
-                <a href="{{ route('home') }}" style="width: 10rem">
+            <div class="shrink-0 items-center flex sm:hidden" style="margin-left: 3rem">
+                <a href="{{ route('home') }}" style="width: 8rem">
                     <x-application-logo
                         class="block fill-current text-gray-800"
                     />
