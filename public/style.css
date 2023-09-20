@@ -113,11 +113,11 @@ swiper-slide img {
         display: block;
     }
     .ipad-nav-icon {
-        display: none !important;
+        display: flex !important;
     }
-    .ipad-nac-text {
-        margin-left: 0px !important;
-    }
+}
+.ipad-nav-icon {
+    display: none;
 }
 
 .nav-mobile {

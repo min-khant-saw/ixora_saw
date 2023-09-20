@@ -36,7 +36,7 @@
                     </svg>
                 </button>
             </div>
-            <div class="shrink-0 items-center flex sm:hidden items" style="margin-left: 3rem">
+            <div class="shrink-0 items-center ipad-nav-icon" style="margin-left: 3rem">
                 <a href="{{ route('home') }}" style="width: 8rem">
                     <x-application-logo
                         class="block fill-current text-gray-800"
