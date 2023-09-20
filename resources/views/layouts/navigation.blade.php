@@ -38,14 +38,14 @@
             </div>
             <div class="flex justify-between" style="margin-left: 17px">
                 <!-- Logo -->
-                <div class="shrink-0 items-center hidden sm:flex">
+                <div class="shrink-0 items-center hidden hidden:flex">
                     <a href="{{ route('home') }}" style="width: 11rem">
                         <x-application-logo
                             class="block fill-current text-gray-800"
                         />
                     </a>
                 </div>
-                <div class="shrink-0 items-center flex" style="margin-right: 2rem">
+                <div class="shrink-0 items-center flex sm:hidden" style="margin-right: 2rem">
                     <a href="{{ route('home') }}" style="width: 10rem">
                         <x-application-logo
                             class="block fill-current text-gray-800"
@@ -171,13 +171,18 @@
     {{ __("Home Decor") }}
 </x-responsive-nav-link>
 
-
-            <x-responsive-nav-link
-                :href="route('about')"
-                :active="request()->routeIs('about')"
-            >
-                {{ __("About") }}
-            </x-responsive-nav-link>
+<x-responsive-nav-link
+:href="route('about')"
+:active="request()->routeIs('about')"
+>
+{{ __("About") }}
+</x-responsive-nav-link>
+<x-responsive-nav-link
+:href="route('about')"
+:active="request()->routeIs('about')"
+>
+{{ __("Sale") }}
+</x-responsive-nav-link>
             <x-responsive-nav-link
                 :href="route('contacts')"
                 :active="request()->routeIs('contacts')"
