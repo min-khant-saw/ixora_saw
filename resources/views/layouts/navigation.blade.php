@@ -127,30 +127,6 @@
 
             <!-- Settings Dropdown -->
             <div class="flex items-center ml-6 relative">
-                <div
-                    class="absolute right-0 flex justify-between gap-2 bg-white search-container"
-                    style="
-                        visibility: hidden;
-                        padding-right: 10px;
-                        opacity: 0;
-                        transition: all 0.2s ease;
-                    "
-                >
-                    <div class="relative flex">
-                        <input type="text" class="rounded h-9 bg-slate-400" />
-                        <div
-                            class="absolute right-0 mr-9 h-full close-search"
-                            style="margin-top: 6px; cursor: pointer"
-                        >
-                            <span
-                                class="material-symbols-rounded text-xl"
-                                style="color: darkslategray"
-                            >
-                                close
-                            </span>
-                        </div>
-                    </div>
-                </div>
                 <span
                     class="items"
                     style="
@@ -277,5 +253,32 @@
             @endguest
         </div>
         --}}
+    </div>
+    <div class="relative">
+        <div class="w-full flex justify-center absolute top-0" style=" margin: 2px auto; transition: all .4s ease-in-out">
+            <div class="flex search-bar" style="width: 80%; overflow: hidden; background-color: black">
+                <input type="text" class="h-9 w-full text-white text-xl search-input" placeholder="Search Anything..." style="border-color: transparent; outline: transparent; box-shadow: unset; transition: all .4s ease-in-out; background-color: transparent" />
+                <div
+                    class="h-full close-search mt-2"
+                    style="margin-top: 6px; cursor: pointer"
+                >
+                    <span
+                        class="material-symbols-rounded text-2xl mt-1 mr-2"
+                        style="color: white"
+                    >
+                        close
+                    </span>
+                </div>
+
+                    <span
+                    class="bg-white border outline flex justify-center items-center"
+                    style="height: 100%; width: 50px;"
+                    ><span
+                        class="material-symbols-rounded text-2xl"
+                    >
+                        search
+                    </span></span>
+            </div>
+        </div>
     </div>
 </nav>

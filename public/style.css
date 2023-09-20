@@ -86,12 +86,24 @@ swiper-slide img {
         /* padding: 5px; */
         font-size: 12px !important;
     }
+    .search-bar {
+        width: 100% !important;
+    }
     /* .shop-now {
         font-size: 10px !important;
     }
     .category-head {
         font-size: 14px !important;
     } */
+}
+
+.search-bar {
+    height: 0px;
+    transition: all 0.4s ease-in-out;
+}
+
+.search-input::placeholder {
+    color: white;
 }
 
 @media (max-width: 999px) {

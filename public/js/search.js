@@ -1,4 +1,4 @@
-const searchContainer = document.querySelector(".search-container");
+const searchContainer = document.querySelector(".search-bar");
 const searchIcon = document.querySelector(".search");
 const icons = document.querySelectorAll(".items");
 const searchClose = document.querySelector(".close-search");
@@ -6,25 +6,12 @@ const navMobile = document.querySelector(".nav-mobile");
 const hamburger = document.querySelector(".hamburger");
 const ipadNavIcon = document.querySelector(".ipad-nav-icon");
 searchIcon.addEventListener("click", () => {
-    icons.forEach((e) => {
-        e.classList.add("opacity-0");
-        e.style.visibility = "hidden";
-    });
-    ipadNavIcon.style.visibility = "hidden";
-    ipadNavIcon.style.opacity = "0";
-    searchContainer.style.visibility = "visible";
-    searchContainer.style.opacity = "1";
+    searchContainer.style.height = "50px";
 });
 
 searchClose.addEventListener("click", () => {
-    icons.forEach((e) => {
-        e.classList.add("opacity-100");
-        e.style.visibility = "visible";
-    });
-    ipadNavIcon.style.visibility = "visible";
-    ipadNavIcon.style.opacity = "1";
-    searchContainer.style.opacity = "0";
-    searchContainer.style.visibility = "hidden";
+    // searchContainer.style.opacity = "0";
+    searchContainer.style.height = "0px";
 });
 
 let isOpen = false;
