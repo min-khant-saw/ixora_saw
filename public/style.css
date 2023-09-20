@@ -94,6 +94,22 @@ swiper-slide img {
     } */
 }
 
+@media (max-width: 999px) {
+    .card-container {
+        flex-wrap: wrap !important;
+        /* margin: ; */
+    }
+}
+
+@media (max-width: 940px) {
+    .ipad-nav-icon {
+        display: none !important;
+    }
+    .ipad-nac-text {
+        margin-left: 0px !important;
+    }
+}
+
 .banner {
     padding: 10px;
 }

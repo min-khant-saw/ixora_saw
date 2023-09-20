@@ -1,6 +1,6 @@
 <x-home-header title="Categorys"/>
 
-<div class="w-full flex justify-center items-center mt-2 category-container" style="gap: 15px;">
+<div class="w-full flex justify-center items-center mt-2 category-container px-2" style="gap: 15px;">
 
 
     <div class="relative overflow-hidden fashion">
