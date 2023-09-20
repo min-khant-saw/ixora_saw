@@ -1,4 +1,4 @@
-<div style="margin: 250px auto">
+<div style="margin: 160px auto">
 
 
 <x-home-header title="Trending Products"/>
