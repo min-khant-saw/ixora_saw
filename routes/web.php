@@ -20,12 +20,7 @@ use Illuminate\Support\Facades\Route;
 
 Route::prefix('/')->group(function () {
     Route::get('/', function () {
-        return redirect()
-            ->to('/home')
-            ->header(
-                'Cache-Control',
-                'no-store, no-cache, must-revalidate, post-check=0, pre-check=0, max-age=0'
-            );
+        return redirect()->to('/home');
     });
 
     Route::get('/home', function () {

@@ -8,6 +8,7 @@
     <div class="min-h-screen">
         {{ $slot }}
     </div>
+    @include('footer')
              {{-- script --}}
              <script src="{{asset('js/search.js')}}"></script>
 </body>

@@ -15,7 +15,10 @@ export default {
                 sans: ["Figtree", ...defaultTheme.fontFamily.sans],
             },
         },
+        pagination: (theme) => ({
+            color: theme("colors.grey"),
+        }),
     },
 
-    plugins: [forms],
+    plugins: [forms, require("tailwindcss-plugins/pagination")],
 };

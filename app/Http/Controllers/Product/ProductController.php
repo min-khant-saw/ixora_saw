@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Product;
 
 use App\Http\Controllers\Controller;
+use App\Models\User;
 use Illuminate\Http\Request;
 
 class ProductController extends Controller
@@ -13,19 +14,26 @@ class ProductController extends Controller
 
     public function fashion(Request $request)
     {
-        return view("pages.fashion");
+        $users = User::paginate(10);
+        return view("pages.fashion")->with('users', $users);
     }
     public function accessories(Request $request)
     {
-        return view('pages.accessories');
+        $users = User::paginate(10);
+
+        return view('pages.accessories')->with('users', $users);
     }
     public function homeDecor(Request $request)
     {
-        return view('pages.home-decor');
+        $users = User::paginate(10);
+
+        return view('pages.home-decor')->with('users', $users);
     }
     public function education()
     {
-        return view('pages.education');
+        $users = User::paginate(10);
+
+        return view('pages.education')->with('users', $users);
     }
     public function sale()
     {
