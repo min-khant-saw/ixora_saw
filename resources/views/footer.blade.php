@@ -8,17 +8,13 @@
 
 
 				<p class="footer-links">
-					<a href="#">Home</a>
+					<a href="{{route('home')}}" class="text-sm">Home</a>
 					·
-					<a href="#">Blog</a>
+					<a href="{{route('about')}}" class="text-sm">About</a>
 					·
-					<a href="#">Pricing</a>
+					<a href="{{route('sale')}}" class="text-sm">Sale</a>
 					·
-					<a href="#">About</a>
-					·
-					<a href="#">Faq</a>
-					·
-					<a href="#">Contact</a>
+					<a href="{{route('contacts')}}" class="text-sm">Contacts</a>
 				</p>
 
 				<p class="footer-company-name">Ixora Saw © 2023</p>

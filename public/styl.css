@@ -258,8 +258,10 @@ swiper-slide img {
 /* Footer links */
 
 .footer-distributed .footer-links {
-    color: #ffffff;
+    color: #302d2d79;
     margin: 0 0 10px;
+    margin-top: 18px;
+    margin-bottom: 18px;
     padding: 0;
 }
 
