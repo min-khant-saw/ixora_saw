@@ -63,7 +63,7 @@
                     <x-nav-link
                         :href="route('home')"
                         :active="request()->routeIs('home')"
-                        style="font-size: 1rem"
+                        style="font-size: 1rem; text-decoration: none"
                     >
                         {{ __("Home") }}
                     </x-nav-link>
@@ -71,7 +71,7 @@
                     <x-nav-link
                         :href="route('fashion')"
                         :active="request()->routeIs('fashion')"
-                        style="font-size: 1rem"
+                        style="font-size: 1rem; text-decoration: none"
                     >
                         {{ __("Fashion") }}
                     </x-nav-link>
@@ -79,7 +79,7 @@
                     <x-nav-link
                         :href="route('accessories')"
                         :active="request()->routeIs('accessories')"
-                        style="font-size: 1rem"
+                        style="font-size: 1rem; text-decoration: none"
                     >
                         {{ __("Acessories") }}
                     </x-nav-link>
@@ -87,7 +87,7 @@
                     <x-nav-link
                         :href="route('homeDecor')"
                         :active="request()->routeIs('homeDecor')"
-                        style="font-size: 1rem"
+                        style="font-size: 1rem; text-decoration: none"
                     >
                         {{ __("Home Decor") }}
                     </x-nav-link>
@@ -95,7 +95,7 @@
                     <x-nav-link
                         :href="route('education')"
                         :active="request()->routeIs('education')"
-                        style="font-size: 1rem"
+                        style="font-size: 1rem; text-decoration: none"
                     >
                         {{ __("Education") }}
                     </x-nav-link>
@@ -103,7 +103,7 @@
                     <x-nav-link
                         :href="route('about')"
                         :active="request()->routeIs('about')"
-                        style="font-size: 1rem"
+                        style="font-size: 1rem; text-decoration: none"
                     >
                         {{ __("About") }}
                     </x-nav-link>
@@ -111,14 +111,14 @@
                     <x-nav-link
                         :href="route('sale')"
                         :active="request()->routeIs('sale')"
-                        style="font-size: 1rem"
+                        style="font-size: 1rem; text-decoration: none"
                     >
                         {{ __("Sale") }}
                     </x-nav-link>
                     <x-nav-link
                         :href="route('contacts')"
                         :active="request()->routeIs('contacts')"
-                        style="font-size: 1rem"
+                        style="font-size: 1rem; text-decoration: none"
                     >
                         {{ __("Contacts") }}
                     </x-nav-link>
@@ -176,6 +176,7 @@
             <x-responsive-nav-link
                 :href="route('home')"
                 :active="request()->routeIs('home')"
+                style="text-decoration: none"
             >
                 {{ __("Home") }}
             </x-responsive-nav-link>
@@ -183,6 +184,7 @@
             <x-responsive-nav-link
                 :href="route('fashion')"
                 :active="request()->routeIs('fashion')"
+                style="text-decoration: none"
             >
                 {{ __("Fashion") }}
             </x-responsive-nav-link>
@@ -190,6 +192,7 @@
             <x-responsive-nav-link
                 :href="route('accessories')"
                 :active="request()->routeIs('accessories')"
+                style="text-decoration: none"
             >
                 {{ __("Accessories") }}
             </x-responsive-nav-link>
@@ -197,6 +200,7 @@
             <x-responsive-nav-link
                 :href="route('homeDecor')"
                 :active="request()->routeIs('homeDecor')"
+                style="text-decoration: none"
             >
                 {{ __("Home Decor") }}
             </x-responsive-nav-link>
@@ -204,6 +208,7 @@
             <x-responsive-nav-link
                 :href="route('education')"
                 :active="request()->routeIs('education')"
+                style="text-decoration: none"
             >
                 {{ __("Education") }}
             </x-responsive-nav-link>
@@ -211,18 +216,21 @@
             <x-responsive-nav-link
                 :href="route('about')"
                 :active="request()->routeIs('about')"
+                style="text-decoration: none"
             >
                 {{ __("About") }}
             </x-responsive-nav-link>
             <x-responsive-nav-link
                 :href="route('sale')"
                 :active="request()->routeIs('sale')"
+                style="text-decoration: none"
             >
                 {{ __("Sale") }}
             </x-responsive-nav-link>
             <x-responsive-nav-link
                 :href="route('contacts')"
                 :active="request()->routeIs('contacts')"
+                style="text-decoration: none"
             >
                 {{ __("Contacts") }}
             </x-responsive-nav-link>
