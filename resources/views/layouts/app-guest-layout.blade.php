@@ -10,6 +10,6 @@
     </div>
     @include('footer')
              {{-- script --}}
-             <script src="{{asset('js/script.js')}}"></script>
+             <script src="{{asset('js/s.js')}}"></script>
 </body>
 </html>
