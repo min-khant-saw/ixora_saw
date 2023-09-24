@@ -34,6 +34,10 @@ Route::prefix('/')->group(function () {
     Route::get('/contacts', function () {
         return view('contacts');
     })->name('contacts');
+
+    Route::get('/product', function () {
+        return view('pages.product');
+    })->name('product');
 });
 
 Route::prefix('/product')->group(function () {

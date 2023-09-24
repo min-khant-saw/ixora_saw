@@ -1,5 +1,5 @@
 <div class="relative rounded product" style="width: 320px; height: 320px;">
-    <a href="">
+    <a href="{{route('product')}}">
      <div class="relative" style="width: 100%; height: 100%;">
         <img class="w-full" style="object-fit: cover; height: 100%" src="{{$image}}" alt="" srcset="" />
      </div>
