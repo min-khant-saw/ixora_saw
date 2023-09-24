@@ -3,6 +3,7 @@
 use App\Http\Controllers\Auth\LogoutController;
 use App\Http\Controllers\Cart\CartController;
 use App\Http\Controllers\Guest\LandingController;
+use App\Http\Controllers\Product\FashionsController;
 use App\Http\Controllers\Product\ProductController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
@@ -42,11 +43,14 @@ Route::prefix('/')->group(function () {
 
 Route::prefix('/product')->group(function () {
     Route::controller(ProductController::class)->group(function () {
-        Route::get('/fashion', 'fashion')->name('fashion');
+        // Route::get('/fashion', 'fashion')->name('fashion');
         Route::get('/accessories', 'accessories')->name('accessories');
         Route::get('/home-decor', 'homeDecor')->name('homeDecor');
         Route::get('/education', 'education')->name('education');
         Route::get('/sale', 'sale')->name('sale');
+    });
+    Route::controller(FashionsController::class)->group(function () {
+        Route::get('/fashion', 'index')->name('fashion');
     });
 });
 

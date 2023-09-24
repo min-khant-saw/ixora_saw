@@ -24,7 +24,7 @@
             </div>
         </div>
 
-        <x-pagination>
-            {{$users->links("pagination::bootstrap-4")}}
-        </x-pagination>
+        <x-pagination> 
+            {{-- <!-- {{$users->links("pagination::bootstrap-4")}} --> --}}
+        </x-pagination> 
     </x-app-guest-layout>

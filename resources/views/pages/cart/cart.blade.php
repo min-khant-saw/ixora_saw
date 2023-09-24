@@ -4,37 +4,26 @@
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
             <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
                 <div class="p-6 text-gray-900">
-
-
-                    <div class="cart_section">
-                        <div class="container-fluid">
-                            <div class="row">
-                                <div class="col-lg-10 offset-lg-1">
-                                    <div class="cart_container">
-                                        <div class="cart_title">Shopping Cart<small> (1 item in your cart) </small>
-                                        </div>
-
-                                        <x-cart/>
-                                        <x-cart/>
-                                        <x-cart/>
-                                        <x-cart/>
-
-
-                                        <div class="order_total">
-                                            <div class="order_total_content text-md-right">
-                                                <div class="order_total_title">Order Total:</div>
-                                                <div class="order_total_amount">₹22000</div>
-                                            </div>
-                                        </div>
-                                        <div class="cart_buttons"> <button type="button"
-                                                class="button cart_button_clear">Checkout</button> </div>
-                                    </div>
-                                </div>
-                            </div>
+                    <div class="shopping-cart">
+                        <!-- Title -->
+                        <div class="title text-center text-xl">
+                            Shopping Bag
                         </div>
+                        <x-cart />
+                        <x-cart />
+                        <x-cart />
+                        <x-cart />
+                        <x-cart />
                     </div>
+                    <div>
 
-
+                    </div>
+                    <div class="flex justify-end mt-2">
+                        <div style="font-size: 17px;">Total : <span class="text-xl font-semibold" style="color: red;">$9999</span></div>
+                    </div>
+                    <div class="flex justify-end mt-2"><a href="" class="text-white font-semibold" style="background-color: black; padding: .4rem;">
+                        Checkout
+                    </a></div>
                 </div>
             </div>
         </div>
