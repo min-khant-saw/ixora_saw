@@ -410,7 +410,7 @@ swiper-slide img {
     height: 300px !important;
   }
   #overlay {
-    left: -23px !important;
+    /* left: -23px !important; */
     width: 80px !important;
     height: 80px !important;
   }
