@@ -91,13 +91,9 @@ imageContainer.addEventListener(events[deviceType].move, (e) => {
     mouseOverlay.style.top = y + "px";
     mouseOverlay.style.left = x + "px";
     overlay.style.top = y + "px";
-    if (window.screen.width < 1001) {
-        overlay.style.left = x - 310 + "px";
-    } else {
+    if (window.screen.width > 1000) {
         overlay.style.left = x + "px";
+    } else {
+        overlay.style.left = x - 310 + "px";
     }
-
-    window.onresize(() => {
-        if (window.screen.width < 1001) overlay.style.left = x - 310 + "px";
-    });
 });
