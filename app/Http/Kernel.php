@@ -2,6 +2,8 @@
 
 namespace App\Http;
 
+use App\Http\Middleware\AdminGuestMiddleware;
+use App\Http\Middleware\AdminRedirectMiddleware;
 use Illuminate\Foundation\Http\Kernel as HttpKernel;
 
 class Kernel extends HttpKernel
@@ -53,6 +55,8 @@ class Kernel extends HttpKernel
      * @var array<string, class-string|string>
      */
     protected $middlewareAliases = [
+        'guest.admin' => AdminGuestMiddleware::class,
+        'admin.auth' => AdminRedirectMiddleware::class,
         'auth' => \App\Http\Middleware\Authenticate::class,
         'auth.basic' =>
             \Illuminate\Auth\Middleware\AuthenticateWithBasicAuth::class,
