@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Admin\Auth\LoginController;
 use App\Http\Controllers\Admin\Dashboard\HomeController;
+use App\Http\Controllers\Admin\Order\OrderController;
 use App\Http\Controllers\Admin\Product\ProductController;
 use App\Http\Controllers\Admin\User\UserController;
 
@@ -24,6 +25,10 @@ Route::prefix('admin')->group(function () {
             Route::get('/product', [ProductController::class, 'index'])->name(
                 'product'
             );
+            Route::get('/order', [OrderController::class, 'index'])->name(
+                'order'
+            );
+
             Route::prefix('/application')
                 ->name('application.')
                 ->group(function () {
