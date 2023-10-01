@@ -1,11 +1,11 @@
 <div class="w-full py-2 flex justify-center items-center">
-    <div class="relative head-container" style="width: 80%">
+    <div class="relative head-container" style="width: 90%">
 
         <img class="head-image" src="https://icms-image.slatic.net/images/ims-web/3e7d967d-d9bd-4013-8152-9237dea60cae.jpg" alt="" srcset="">
 
         <div class="absolute " style="width: 50%; top: 0px; left: 0px; height: 100%; background: linear-gradient(to left, rgba(0, 0, 0, 0.029),rgba(0, 0, 0, 0.067),rgba(0, 0, 0, 0.166),rgba(0, 0, 0, 0.363),rgba(3, 0, 0, 0.851));
         ">
-        <button class="bg-white p-2 font-semibold rounded btn" style="margin: 30px; margin-left: 50px">Shop Now</button>
+        <button class="bg-white font-semibold rounded btn" style="margin: 30px; margin-left: 50px; width: max-content; padding: 3px 9px;">Shop Now</button>
 
         {{-- <swiper-container class="mySwiper w-full border" pagination="true" pagination-clickable="true" space-between="30"
         centered-slides="true" autoplay-delay="5500" autoplay-disable-on-interaction="false">

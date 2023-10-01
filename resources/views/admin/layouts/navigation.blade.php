@@ -1,4 +1,4 @@
-<nav class="min-h-screen bg-white w-max flex flex-col justify-between">
+<nav class="min-h-screen bg-white w-max flex flex-col justify-between z-30 sticky left-0 top-0">
     <div class="w-[250px] p-7 border-b">
         @include('admin.components.logo')
     </div>
