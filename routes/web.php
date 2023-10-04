@@ -35,22 +35,16 @@ Route::prefix('/')->group(function () {
     Route::get('/contacts', function () {
         return view('contacts');
     })->name('contacts');
-
-    Route::get('/product', function () {
-        return view('pages.product');
-    })->name('product');
 });
 
 Route::prefix('/product')->group(function () {
     Route::controller(ProductController::class)->group(function () {
-        // Route::get('/fashion', 'fashion')->name('fashion');
+        Route::get('/fashion', 'fashion')->name('fashion');
         Route::get('/accessories', 'accessories')->name('accessories');
         Route::get('/home-decor', 'homeDecor')->name('homeDecor');
         Route::get('/education', 'education')->name('education');
         Route::get('/sale', 'sale')->name('sale');
-    });
-    Route::controller(FashionsController::class)->group(function () {
-        Route::get('/fashion', 'index')->name('fashion');
+        Route::get('/id={id}', 'singleProduct')->name('product');
     });
 });
 

@@ -12,6 +12,6 @@ class Category extends Model
 
     public function fashion()
     {
-        return $this->hasOne(Fashion::class);
+        return $this->hasOne(Fashion::class, 'category_id');
     }
 }

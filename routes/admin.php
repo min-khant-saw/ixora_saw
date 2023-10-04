@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Admin\AddProduct\AddProductController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Admin\Auth\LoginController;
 use App\Http\Controllers\Admin\Dashboard\HomeController;
@@ -22,9 +23,18 @@ Route::prefix('admin')->group(function () {
             Route::get('/', [HomeController::class, 'index'])->name(
                 'dashboard'
             );
-            Route::get('/product', [ProductController::class, 'index'])->name(
-                'product'
-            );
+
+            Route::controller(ProductController::class)->group(function () {
+                Route::get('/product/{productType?}/{sort?}', 'index')->name(
+                    'product'
+                );
+                Route::delete('/product/{id}', 'delete')->name(
+                    'product.delete'
+                );
+                Route::get('/edit/{id}', 'edit')->name('product.edit');
+                Route::put('/update/{id}', 'update')->name('product.update');
+            });
+
             Route::get('/order', [OrderController::class, 'index'])->name(
                 'order'
             );
@@ -36,6 +46,15 @@ Route::prefix('admin')->group(function () {
                         UserController::class,
                         'index',
                     ])->name('users');
+                });
+
+            Route::controller(AddProductController::class)
+                ->name('add.')
+                ->group(function () {
+                    Route::get('/add-product', 'index')->name('product');
+                    Route::post('/add-new-product', 'store')->name(
+                        'new.product'
+                    );
                 });
         });
 });

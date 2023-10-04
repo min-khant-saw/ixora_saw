@@ -17,6 +17,7 @@
         <link rel="stylesheet"
             href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
         <!-- Scripts -->
+        <link rel="shortcut icon" href="{{URL::asset('build/assets/images/Ixora-Saw-Logo-background.png')}}" type="image/x-icon">
 
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
 

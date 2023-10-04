@@ -11,9 +11,17 @@ class ProductTable extends Component
     /**
      * Create a new component instance.
      */
-    public function __construct()
+    public $title;
+    public $price;
+    public $image;
+    public $id;
+
+    public function __construct($title,$price,$image,$id)
     {
-        //
+        $this->title = $title;
+        $this->price = $price;
+        $this->image = $image;
+        $this->id = $id;
     }
 
     /**

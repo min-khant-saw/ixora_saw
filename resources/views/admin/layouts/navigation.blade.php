@@ -13,7 +13,7 @@
                 </span>
             </div>
             <ul
-                class="flex flex-col gap-4 text-base justify-center {{ request()->routeIs('admin.dashboard') || request()->routeIs('admin.product') || request()->routeIs('admin.order') ? 'opacity-100 visible h-[160px]' : 'opacity-0 invisible h-0' }} dashboard transition-all ease-in-out duration-300 overflow-hidden">
+                class="flex flex-col gap-4 text-base justify-center {{ request()->routeIs('admin.dashboard') || request()->routeIs('admin.product') || request()->routeIs('admin.order') || request()->routeIs('admin.add.product') ? 'opacity-100 visible h-[210px]' : 'opacity-0 invisible h-0' }} dashboard transition-all ease-in-out duration-300 overflow-hidden">
                 <a href="{{ route('admin.dashboard') }}">
                     <li class="flex items-center ml-4 pt-3 {{ request()->routeIs('admin.dashboard') ? 'pl-3' : '' }}">
                         <span class="material-symbols-rounded text-2xl mr-2">
@@ -39,6 +39,18 @@
                         </span>
                         <span
                             class="text-md {{ request()->routeIs('admin.order') ? 'text-red-800 font-semibold' : '' }}">Order</span>
+                    </li>
+                </a>
+
+                <a href="{{ route('admin.add.product') }}">
+                    <li
+                        class="flex items-center ml-4 pb-1 {{ request()->routeIs('admin.add.product') ? 'pl-3' : '' }}">
+                        <span class="material-symbols-rounded text-2xl mr-2">
+                            add_shopping_cart
+                        </span>
+                        <span
+                            class="text-md {{ request()->routeIs('admin.add.product') ? 'text-red-800 font-semibold' : '' }}">Add
+                            Product</span>
                     </li>
                 </a>
 
@@ -74,6 +86,7 @@
 
     </div>
     <div class="mt-auto mb-3 ml-2 text-sm">
-        <h1>Develope By <a class="font-bold text-blue-400" href="https://min-khant-saw.github.io/portfolio-1/" target="_blank">@Min Khant Saw</a></h1>
+        <h1>Develope By <a class="font-bold text-blue-400" href="https://min-khant-saw.github.io/portfolio-1/"
+                target="_blank">@Min Khant Saw</a></h1>
     </div>
 </nav>
