@@ -3,15 +3,10 @@
     <x-home-header title="Discount Products"/>
 
     <x-product-container>
-
-        <x-product image="https://preview.colorlib.com/theme/amado/img/bg-img/1.jpg.webp"/>
-    
-        <x-product image="https://preview.colorlib.com/theme/amado/img/bg-img/5.jpg.webp"/>
-    
-        <x-product image="https://preview.colorlib.com/theme/amado/img/bg-img/9.jpg"/>
-    
-        <x-product image="https://preview.colorlib.com/theme/amado/img/bg-img/4.jpg.webp"/>
-
+        @foreach ($latest as $product)
+            <x-product id="{{ $product->id }}" title="{{ $product->title }}" price="{{ $product->price }}"
+                image="{{ $product->image }}" category="{{ $product->category->title }}" />
+        @endforeach
     </x-product-container>
 
 </div>

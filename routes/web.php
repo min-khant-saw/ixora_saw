@@ -3,6 +3,7 @@
 use App\Http\Controllers\Auth\LogoutController;
 use App\Http\Controllers\Cart\CartController;
 use App\Http\Controllers\Guest\LandingController;
+use App\Http\Controllers\Home\HomeController;
 use App\Http\Controllers\Product\FashionsController;
 use App\Http\Controllers\Product\ProductController;
 use App\Http\Controllers\ProfileController;
@@ -24,9 +25,7 @@ Route::prefix('/')->group(function () {
         return redirect()->to('/home');
     });
 
-    Route::get('/home', function () {
-        return view('home');
-    })->name('home');
+    Route::get('/home', [HomeController::class, 'index'])->name('home');
 
     Route::get('/about', function () {
         return view('about');
