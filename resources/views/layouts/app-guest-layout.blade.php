@@ -3,15 +3,9 @@
 
 <meta property="og:site_name" content="Ixora Saw">
 <meta property="og:title" content="Ixora Saw">
-<meta property="og:description" content="">
-<meta property="og:type" content="website">
-<meta property="og:locale" content="en">
+<meta property="og:description" content="Hello">
 <meta property="og:url" content="{{ url()->full() }}">
-<meta property="og:image" content="{{ URL::asset('build/assets/images/Ixora-Saw-Logo-background.png') }}">
-<meta property="og:image:width" content="1200">
-<meta property="og:image:height" content="630">
-<meta property="og:image:alt"
-    content="Build your knowledge with the hidden Laravel Secrets you find in this book. Learn about the why and not the what.">
+{{-- <meta property="og:image" content="{{ URL::asset('build/assets/images/Ixora-Saw-Logo-background.png') }}"> --}}
 
 <body>
     @include('layouts.navigation')
