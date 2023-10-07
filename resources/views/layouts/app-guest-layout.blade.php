@@ -1,10 +1,10 @@
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 @include('header.html-header')
-<meta property="site_name" content="Ixora Saw">
-<meta property="description" content="Boutique. Sell handmade products.">
-<meta property="image" content="{{ URL::asset('build/assets/images/Ixora-Saw-Logo-background.png') }}">
-<meta property="url" content="{{ url()->full() }}">
-<meta property="type" content="Ecommerce">
+<meta name="og:site_name" content="Ixora Saw">
+<meta name="og:description" content="Boutique. Sell handmade products.">
+<meta name="og:image" content="{{ URL::asset('build/assets/images/Ixora-Saw-Logo-background.png') }}">
+<meta name="og:url" content="{{ url()->full() }}">
+<meta name="og:type" content="Ecommerce">
 
 <body>
     @include('layouts.navigation')
