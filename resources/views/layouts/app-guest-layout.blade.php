@@ -1,5 +1,7 @@
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 @include('header.html-header')
+<meta property="og:site_name" content="Ixora Saw">
+<meta property="og:description" content="Boutique. Sell handmade products.">
 <body>
     @include('layouts.navigation')
     <div class="w-full text-center justify-center items-center banner {{request()->routeIs('home')? 'flex': 'hidden'}}" style="background-color: black;">
