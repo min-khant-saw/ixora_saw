@@ -3,7 +3,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{ config('app.name', 'Laravel') }}</title>
+    <title>{{ config('app.name') }}</title>
 
     <!-- <link rel="stylesheet" href="{{ asset('mystyle.css') }}"> -->
     <link rel="stylesheet" href="{{ asset('mystyle.css') }}">
@@ -18,7 +18,6 @@
         href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <link rel="shortcut icon" href="{{ URL::asset('build/assets/images/Ixora-Saw-Logo-background.png') }}"
         type="image/x-icon">
-    <meta property="og:og:description" content="Boutique. Sell handmade products." />
     <!-- Scripts -->
     @vite(['resources/css/admin.css'])
 </head>
