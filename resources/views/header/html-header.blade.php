@@ -5,7 +5,7 @@
 
         <meta property="og:site_name" content="Ixora Saw">
         <meta property="og:title" content="Ixora Saw">
-        <meta property="og:description" content="Hello">
+        <meta property="og:description" content="Boutique. Sell handmade products.">
         <meta property="og:url" content="{{ url()->full() }}">
         <meta property="og:image" content="{{ URL::asset('build/assets/images/Ixora-Saw-Logo-background.png') }}">
 
