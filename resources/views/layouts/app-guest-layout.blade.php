@@ -1,11 +1,10 @@
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
-@include('header.html-header')
-
 <meta property="og:site_name" content="Ixora Saw">
 <meta property="og:title" content="Ixora Saw">
 <meta property="og:description" content="Hello">
 <meta property="og:url" content="{{ url()->full() }}">
-{{-- <meta property="og:image" content="{{ URL::asset('build/assets/images/Ixora-Saw-Logo-background.png') }}"> --}}
+<meta property="og:image" content="{{ URL::asset('build/assets/images/Ixora-Saw-Logo-background.png') }}">
+@include('header.html-header')
 
 <body>
     @include('layouts.navigation')
