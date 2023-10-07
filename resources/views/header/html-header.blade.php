@@ -3,7 +3,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="csrf-token" content="{{ csrf_token() }}">
 
-        <meta property="og:title" content="Ixora Saw">
+        <meta property="og:site_name" content="Ixora Saw">
 <meta property="og:description" content="Boutique. Sell handmade products.">
 <!-- <meta property="og:image" content="URL to your image">
 <meta property="og:url" content="URL of your page">
