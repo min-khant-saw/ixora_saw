@@ -1,10 +1,17 @@
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 @include('header.html-header')
-<meta name="og:site_name" content="Ixora Saw">
-<meta name="og:description" content="Boutique. Sell handmade products.">
-<meta name="og:image" content="{{ URL::asset('build/assets/images/Ixora-Saw-Logo-background.png') }}">
-<meta name="og:url" content="{{ url()->full() }}">
-<meta name="og:type" content="Ecommerce">
+
+<meta property="og:site_name" content="Ixora Saw">
+<meta property="og:title" content="Ixora Saw">
+<meta property="og:description" content="">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="en">
+<meta property="og:url" content="{{ url()->full() }}">
+<meta property="og:image" content="{{ URL::asset('build/assets/images/Ixora-Saw-Logo-background.png') }}">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt"
+    content="Build your knowledge with the hidden Laravel Secrets you find in this book. Learn about the why and not the what.">
 
 <body>
     @include('layouts.navigation')
