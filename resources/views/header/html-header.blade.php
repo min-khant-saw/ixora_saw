@@ -20,7 +20,7 @@
         <link rel="shortcut icon" href="{{URL::asset('build/assets/images/Ixora-Saw-Logo-background.png')}}" type="image/x-icon">
 
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
-        <meta property="og:site_name" content="{{ config('app.name') }}">
+        <meta property="og:site_name" content="Ixora Saw">
         <meta property="og:og:description" content="Boutique. Sell handmade products." />
 
 
