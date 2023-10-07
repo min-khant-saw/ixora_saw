@@ -2,6 +2,9 @@
 @include('header.html-header')
 <meta property="og:site_name" content="Ixora Saw">
 <meta property="og:description" content="Boutique. Sell handmade products.">
+<meta property="og:image" content="URL to your image">
+<meta property="og:url" content="URL of your page">
+<meta property="og:type" content="website">
 <body>
     @include('layouts.navigation')
     <div class="w-full text-center justify-center items-center banner {{request()->routeIs('home')? 'flex': 'hidden'}}" style="background-color: black;">
