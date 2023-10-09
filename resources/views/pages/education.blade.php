@@ -3,10 +3,16 @@
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
             <div class="p-6 text-gray-900 flex justify-center">
                 <x-single-product>
-
                     @foreach ($educations as $education)
-                        <x-product id="{{ $education->id }}" category="{{ $education->category->title }}" price="{{ $education->price }}"
-                            title="{{ $education->title }}" image="{{ $education->image }}" />
+                        @php
+                            $totalPrice = $education->price;
+                            $discountPrice = $education->discount;
+                            $calc = $totalPrice * ($discountPrice / 100);
+                            $resultPrice = $totalPrice - $calc;
+                        @endphp
+                        <x-product id="{{ $education->id }}" category="{{ $education->category->title }}"
+                            price="{{ $education->price }}" title="{{ $education->title }}" image="{{ $education->image }}"
+                            discountPrice="{{ $education->discount }}" discount="{{ $resultPrice }}" />
                     @endforeach
 
                 </x-single-product>

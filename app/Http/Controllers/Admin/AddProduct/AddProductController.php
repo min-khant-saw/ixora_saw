@@ -4,7 +4,7 @@ namespace App\Http\Controllers\Admin\AddProduct;
 
 use App\Http\Controllers\Controller;
 use App\Models\Category;
-use App\Models\Fashion;
+use App\Models\Product;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
 
@@ -44,7 +44,7 @@ class AddProductController extends Controller
 
         $category = Category::where('title', $data['category'])->first();
 
-        $product = new Fashion($data);
+        $product = new Product($data);
 
         $product->category()->associate($category);
 

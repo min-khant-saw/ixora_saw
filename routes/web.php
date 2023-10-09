@@ -2,9 +2,7 @@
 
 use App\Http\Controllers\Auth\LogoutController;
 use App\Http\Controllers\Cart\CartController;
-use App\Http\Controllers\Guest\LandingController;
 use App\Http\Controllers\Home\HomeController;
-use App\Http\Controllers\Product\FashionsController;
 use App\Http\Controllers\Product\ProductController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
@@ -58,7 +56,18 @@ Route::middleware('auth')->group(function () {
         'profile.destroy'
     );
     Route::post('/logout', [LogoutController::class, 'logout'])->name('logout');
-    Route::get('/cart', [CartController::class, 'index'])->name('cart');
+
+    Route::group(
+        [
+            'controller' => CartController::class,
+            'prefix' => '/cart',
+        ],
+        function () {
+            Route::get('/', 'index')->name('cart');
+            Route::post('/add-card/{id}', 'add')->name('cart.add');
+            Route::delete('/delete-cart/{id}', 'delete')->name('cart.delete');
+        }
+    );
 });
 
 require __DIR__ . '/auth.php';

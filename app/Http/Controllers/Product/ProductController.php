@@ -3,7 +3,7 @@
 namespace App\Http\Controllers\Product;
 
 use App\Http\Controllers\Controller;
-use App\Models\Fashion;
+use App\Models\Product;
 use App\Models\User;
 use Illuminate\Http\Request;
 
@@ -15,7 +15,7 @@ class ProductController extends Controller
 
     public function home()
     {
-        $latestProduct = Fashion::with('category')
+        $latestProduct = Product::with('category')
             ->latest()
             ->chunk(4)
             ->inRandomOrder();
@@ -23,7 +23,7 @@ class ProductController extends Controller
 
     public function fashion(Request $request)
     {
-        $fashions = Fashion::with('category')
+        $fashions = Product::with('category')
             ->whereHas('category', function ($query) {
                 $query->where('title', 'Fashion');
             })
@@ -33,7 +33,7 @@ class ProductController extends Controller
     }
     public function accessories(Request $request)
     {
-        $accessories = Fashion::with('category')
+        $accessories = Product::with('category')
             ->whereHas('category', function ($query) {
                 $query->where('title', 'Accessorie');
             })
@@ -43,7 +43,7 @@ class ProductController extends Controller
     }
     public function homeDecor(Request $request)
     {
-        $homeDecors = Fashion::with('category')
+        $homeDecors = Product::with('category')
             ->whereHas('category', function ($query) {
                 $query->where('title', 'Home Decor');
             })
@@ -53,7 +53,7 @@ class ProductController extends Controller
     }
     public function education()
     {
-        $educations = Fashion::with('category')
+        $educations = Product::with('category')
             ->whereHas('category', function ($query) {
                 $query->where('title', 'Education');
             })
@@ -68,7 +68,7 @@ class ProductController extends Controller
 
     public function singleProduct($id)
     {
-        $product = Fashion::with('category')->find($id);
+        $product = Product::with('category')->find($id);
 
         return view('pages.product')->with('product', $product);
     }

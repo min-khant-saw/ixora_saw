@@ -4,7 +4,7 @@ namespace App\Http\Controllers\Admin\Product;
 
 use App\Http\Controllers\Controller;
 use App\Models\Category;
-use App\Models\Fashion;
+use App\Models\Product;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
 
@@ -20,7 +20,7 @@ class ProductController extends Controller
         // dd($productType);
 
         if (is_null($sort)) {
-            $products = Fashion::with('category')
+            $products = Product::with('category')
                 ->whereHas('category', function ($query) use ($productType) {
                     $query->where(
                         'title',
@@ -40,7 +40,7 @@ class ProductController extends Controller
             $path = $request->path(); // Get the path portion of the URL
             $productType = str_after($path, 'product/'); // Get the part after "product/"
 
-            $products = Fashion::with('category')
+            $products = Product::with('category')
                 ->whereHas('category', function ($query) use ($productType) {
                     $query->where(
                         'title',
@@ -57,25 +57,25 @@ class ProductController extends Controller
                 ->paginate(6);
         }
 
-        $fashionCount = Fashion::with('category')
+        $fashionCount = Product::with('category')
             ->whereHas('category', function ($query) {
                 $query->where('title', 'Fashion');
             })
             ->count();
 
-        $accessorieCount = Fashion::with('category')
+        $accessorieCount = Product::with('category')
             ->whereHas('category', function ($query) {
                 $query->where('title', 'Accessorie');
             })
             ->count();
 
-        $homeDecorCount = Fashion::with('category')
+        $homeDecorCount = Product::with('category')
             ->whereHas('category', function ($query) {
                 $query->where('title', 'Home Decor');
             })
             ->count();
 
-        $educationCount = Fashion::with('category')
+        $educationCount = Product::with('category')
             ->whereHas('category', function ($query) {
                 $query->where('title', 'Education');
             })
@@ -101,7 +101,7 @@ class ProductController extends Controller
     }
     public function delete($id)
     {
-        $deleteFashion = Fashion::find($id);
+        $deleteFashion = Product::find($id);
 
         Storage::disk('public')->delete($deleteFashion->image);
 
@@ -111,7 +111,7 @@ class ProductController extends Controller
     }
     public function edit($id)
     {
-        $product = Fashion::with('category')->find($id);
+        $product = Product::with('category')->find($id);
         return view('admin.dashboard.edit-product', [
             'product' => $product,
         ]);
@@ -124,13 +124,13 @@ class ProductController extends Controller
             'price' => 'numeric',
             'image' => 'mimes:jpg,png,jpeg|max:10240',
             'category' => 'string',
+            'discount' => 'numeric|sometimes',
         ]);
 
         $data = $request->all();
-
         $category = Category::where('title', $data['category'])->first();
 
-        $product = Fashion::find($id);
+        $product = Product::find($id);
 
         if (isset($data['image']) && asset($data['image'])) {
             Storage::disk('public')->delete($product->image);
@@ -148,9 +148,7 @@ class ProductController extends Controller
 
             $data['image'] = $fileName;
         }
-
         $product->fill($data);
-
         $product->category()->associate($category);
 
         $product->save();

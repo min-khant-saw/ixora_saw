@@ -3,7 +3,7 @@
 namespace App\Http\Controllers\Home;
 
 use App\Http\Controllers\Controller;
-use App\Models\Fashion;
+use App\Models\Product;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
@@ -14,13 +14,20 @@ class HomeController extends Controller
 
     public function index()
     {
-        $latestProducts = Fashion::with('category')
+        $latestProducts = Product::with('category')
+            ->latest()
+            ->take(4)
+            ->get();
+
+        $discountProducts = Product::with('category')
+            ->where('discount', '>', 0)
             ->latest()
             ->take(4)
             ->get();
 
         return view('home', [
             'latest' => $latestProducts,
+            'discount' => $discountProducts,
         ]);
     }
 }

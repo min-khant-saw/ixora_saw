@@ -5,8 +5,16 @@
                 <x-single-product>
 
                     @foreach ($accessories as $accessorie)
-                        <x-product id="{{ $accessorie->id }}" category="{{ $accessorie->category->title }}" price="{{ $accessorie->price }}"
-                            title="{{ $accessorie->title }}" image="{{ $accessorie->image }}" />
+                        @php
+                            $totalPrice = $accessorie->price;
+                            $discountPrice = $accessorie->discount;
+                            $calc = $totalPrice * ($discountPrice / 100);
+                            $resultPrice = $totalPrice - $calc;
+                        @endphp
+                        <x-product id="{{ $accessorie->id }}" category="{{ $accessorie->category->title }}"
+                            price="{{ $accessorie->price }}" title="{{ $accessorie->title }}"
+                            image="{{ $accessorie->image }}" discountPrice="{{ $accessorie->discount }}"
+                            discount="{{ $resultPrice }}" />
                     @endforeach
 
                 </x-single-product>

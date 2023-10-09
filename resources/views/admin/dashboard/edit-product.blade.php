@@ -12,20 +12,39 @@
                         class="block w-full px-4 py-2 mt-2 border-none focus:ring-2 focus:ring-red-600 rounded transition-all">
                 </div>
 
-                <div>
-                    <label class="" for="price">Price</label>
-                    <input id="price" type="number" name="price" value="{{ $product->price }}"
-                        class="block w-full px-4 py-2 mt-2 border-none focus:ring-2 focus:ring-red-600 rounded transition-all">
+                <div class="flex justify-center">
+                    <div class="w-full flex justify-center flex-col gap-y-5">
+                        <div>
+                            <label class="" for="price">Price</label>
+                            <input id="price" type="number" name="price" value="{{ $product->price }}"
+                                class="block w-full px-4 py-2 mt-2 border-none focus:ring-2 focus:ring-red-600 rounded transition-all">
+                        </div>
+
+                        <div>
+                            <label class="" for="discount">Discount</label>
+                            <select name="discount" id="discount"
+                                class="block w-full px-4 py-2 mt-2 border-none focus:ring-2 focus:ring-red-600 rounded transition-all">
+                                <option value="0" selected>
+                                    none</option>
+                                <option value="100">
+                                    100%</option>
+                                <option value="80">80%</option>
+                                <option value="50">50%</option>
+                                <option value="30">30%</option>
+                                <option value="10">10%</option>
+                            </select>
+                        </div>
+                    </div>
                 </div>
                 <div>
                     <label class="" for="category">Categorys</label>
                     <select name="category" id="category"
                         class="block w-full px-4 py-2 mt-2 border-none focus:ring-2 focus:ring-red-600 rounded transition-all">
-                        <option value="Fashion" @selected(old($product->category->title) === 'Fashion' ? true : false)>
+                        <option value="Fashion" @selected($product->category->title === 'Fashion' ? true : false)>
                             Fashion</option>
-                        <option value="Accessorie" @selected(old($product->category->title) === 'Accessorie' ? true : false)>Accessorie</option>
-                        <option value="Home Decor" @selected(old($product->category->title) === 'Home Decor' ? true : false)>Home Decor</option>
-                        <option value="Education" @selected(old($product->category->title) === 'Education' ? true : false)>Education</option>
+                        <option value="Accessorie" @selected($product->category->title === 'Accessorie' ? true : false)>Accessorie</option>
+                        <option value="Home Decor" @selected($product->category->title === 'Home Decor' ? true : false)>Home Decor</option>
+                        <option value="Education" @selected($product->category->title === 'Education' ? true : false)>Education</option>
                     </select>
                 </div>
                 <div>
@@ -62,7 +81,7 @@
             </div>
 
             <div class="flex justify-center mt-6">
-                <button
+                <button type="submit"
                     class="px-8 py-2.5 leading-5 text-white transition-colors duration-200 bg-black rounded">Save</button>
             </div>
         </form>

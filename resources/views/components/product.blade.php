@@ -7,7 +7,13 @@
         <div class="flex justify-center items-center flex-col mt-1 text-center">
             <p class="text-base text-gray-500">{{ $category }}</p>
             <h1 class="text-xl product-header">{{ $title }}</h1>
-            <p class="text-lg text-gray-600 font-semibold">{{ $price }}$</p>
+            <div class="flex justify-center gap-x-2">
+                <p class="text-lg text-gray-600 font-semibold {{ $discountPrice > 0 ? 'line-through' : '' }}">
+                    $ {{ $price }}</p>
+                @if ($discountPrice > 0)
+                    <p class="text-lg text-red-600 font-semibold">$ {{ ceil($discount) }}</p>
+                @endif
+            </div>
         </div>
     </a>
 </div>

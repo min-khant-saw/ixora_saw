@@ -11,18 +11,22 @@ return new class extends Migration {
      */
     public function up(): void
     {
-        Schema::create('fashions', function (Blueprint $table) {
+        Schema::create('product_user', function (Blueprint $table) {
             $table->id();
-            $table->unsignedBigInteger('category_id');
-            $table->string('title');
-            $table->text('description');
-            $table->integer('price');
-            $table->text('image');
-            $table
-                ->foreign('category_id')
-                ->references('id')
-                ->on('categories');
+            $table->unsignedBigInteger('product_id'); // Corrected column name
+            $table->unsignedBigInteger('user_id'); // Corrected column name
             $table->timestamps();
+
+            $table
+                ->foreign('product_id')
+                ->references('id')
+                ->on('products')
+                ->cascadeOnDelete();
+            $table
+                ->foreign('user_id')
+                ->references('id')
+                ->on('users')
+                ->cascadeOnDelete();
         });
     }
 
@@ -32,7 +36,7 @@ return new class extends Migration {
     public function down(): void
     {
         DB::statement('SET FOREIGN_KEY_CHECKS=0;');
-        Schema::dropIfExists('fashions');
+        Schema::dropIfExists('product_users');
         DB::statement('SET FOREIGN_KEY_CHECKS=1;');
     }
 };
