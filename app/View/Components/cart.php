@@ -15,12 +15,15 @@ class cart extends Component
     public $id;
     public $discount;
     public $discountPrice;
+    public $totalProduct;
+    public $productId;
+    public $ids;
 
     /**
      * Create a new component instance.
      */
     
-    public function __construct($image, $title, $price, $category, $id, $discount = 0, $discountPrice = 0)
+    public function __construct($image, $title, $price, $category, $id, $discount = 0, $discountPrice = 0, $totalProduct = 1,$productId,$ids)
     {
         $this->image = $image;
         $this->title = $title;
@@ -29,6 +32,9 @@ class cart extends Component
         $this->id = $id;
         $this->discount = $discount;
         $this->discountPrice = $discountPrice;
+        $this->totalProduct = $totalProduct;
+        $this->productId = $productId;
+        $this->ids = $ids;
     }
 
     /**

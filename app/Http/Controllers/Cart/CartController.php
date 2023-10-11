@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Cart;
 
 use App\Http\Controllers\Controller;
+use App\Models\Product;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
@@ -17,14 +18,13 @@ class CartController extends Controller
     {
         $products = User::find($request->user()->id)
             ->with('cartProduct')
-            ->get();
+            ->lazy();
         $myCart = [];
         foreach ($products as $product) {
             foreach ($product->cartProduct as $cart) {
                 array_push($myCart, $cart);
             }
         }
-
         $totalPrice = 0;
 
         foreach ($myCart as $value) {
@@ -60,12 +60,16 @@ class CartController extends Controller
 
     public function delete($id)
     {
-        // $user = User::find(auth()->id());
-        // $user->cartProduct()->detach($id);
-
         DB::table('product_user')
             ->where('id', $id)
-            ->delete($id);
+            ->delete();
+
+        return back();
+    }
+    public function deleteProduct($id)
+    {
+        $product = User::find(auth()->id());
+        $product->cartProduct()->detach($id);
 
         return back();
     }

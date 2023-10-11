@@ -38,6 +38,6 @@ class User extends Authenticatable
 
     public function cartProduct()
     {
-        return $this->belongsToMany(Product::class);
+        return $this->belongsToMany(Product::class)->withPivot('id');
     }
 }

@@ -4,7 +4,7 @@
 
     <!-- Product #1 -->
     <div class="item">
-        <form class="buttons" action="{{ route('cart.delete', ['id' => $id]) }}" method="POST">
+        <form class="buttons" action="{{ route('carts.delete', ['id' => $ids]) }}" method="POST">
             @csrf
             @method('delete')
             <button type="submit">
@@ -24,17 +24,26 @@
         </div>
 
         <div class="quantity flex justify-center" style="gap: 15px;">
-            <button class="plus-btn" type="button" name="button">
-                <span class="material-symbols-rounded">
-                    add
-                </span>
-            </button>
-            <span style="margin-top: 2px;">1</span>
-            <button class="minus-btn" type="button" name="button">
-                <span class="material-symbols-rounded">
-                    remove
-                </span>
-            </button>
+            <form action="{{ route('cart.add', ['id' => $productId]) }}" method="post">
+                @csrf
+                @method('post')
+                <button type="submit" class="plus-btn" name="button">
+                    <span class="material-symbols-rounded">
+                        add
+                    </span>
+                </button>
+            </form>
+            <span style="margin-top: 2px;">{{ $totalProduct }}</span>
+            <form action="{{ route('cart.delete', ['id' => $id]) }}" method="post">
+                @csrf
+                @method('delete')
+                <button class="minus-btn" type="submit" name="button">
+                    <span class="material-symbols-rounded">
+                        remove
+                    </span>
+                </button>
+            </form>
+
         </div>
 
         <div class="flex gap-x-2 w-40 justify-center">

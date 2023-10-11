@@ -66,6 +66,9 @@ Route::middleware('auth')->group(function () {
             Route::get('/', 'index')->name('cart');
             Route::post('/add-card/{id}', 'add')->name('cart.add');
             Route::delete('/delete-cart/{id}', 'delete')->name('cart.delete');
+            Route::delete('/delete/{id}', 'deleteProduct')->name(
+                'carts.delete'
+            );
         }
     );
 });
