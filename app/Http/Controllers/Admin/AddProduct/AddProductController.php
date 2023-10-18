@@ -26,21 +26,56 @@ class AddProductController extends Controller
             'title' => 'required|string|max:255',
             'description' => 'required|string',
             'price' => 'required|numeric',
-            'image' => 'required|mimes:jpg,png,jpeg|max:10240',
+            'imageOne' => 'required|mimes:jpg,png,jpeg|max:10240',
+            'imageTwo' => 'sometimes|mimes:jpg,png,jpeg|max:10240',
+            'imageThree' => 'sometimes|mimes:jpg,png,jpeg|max:10240',
             'category' => 'required|string',
         ]);
 
         $data = $request->all();
 
         $fileName =
-            $this->path . \Str::random(10) . '.' . $data['image']->extension();
+            $this->path .
+            \Str::random(10) .
+            '.' .
+            $data['imageOne']->extension();
 
         Storage::disk('public')->put(
             $fileName,
-            file_get_contents($data['image'])
+            file_get_contents($data['imageOne'])
         );
 
-        $data['image'] = $fileName;
+        $data['imageOne'] = $fileName;
+
+        if ($data['imageTwo']) {
+            $fileName =
+                $this->path .
+                \Str::random(10) .
+                '.' .
+                $data['imageTwo']->extension();
+
+            Storage::disk('public')->put(
+                $fileName,
+                file_get_contents($data['imageTwo'])
+            );
+
+            $data['imageTwo'] = $fileName;
+        }
+
+        if ($data['imageThree']) {
+            $fileName =
+                $this->path .
+                \Str::random(10) .
+                '.' .
+                $data['imageThree']->extension();
+
+            Storage::disk('public')->put(
+                $fileName,
+                file_get_contents($data['imageThree'])
+            );
+
+            $data['imageThree'] = $fileName;
+        }
 
         $category = Category::where('title', $data['category'])->first();
 

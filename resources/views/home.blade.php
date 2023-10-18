@@ -6,7 +6,7 @@
     </x-slot> --}}
 
     @include('pages.components.header')
-    @include('pages.components.category')
+    @include('pages.components.categories')
     @include('pages.components.new-product')
     @include('pages.components.trending-product')
     @include('pages.components.discount-product')

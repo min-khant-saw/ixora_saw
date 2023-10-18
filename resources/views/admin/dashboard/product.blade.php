@@ -115,7 +115,7 @@
                                                         <tr class="w-full">
                                                             <x-admin.product-table title="{{ $product->title }}"
                                                                 price="{{ $product->price }}"
-                                                                image="{{ $product->image }}"
+                                                                image="{{ $product->imageOne }}"
                                                                 id="{{ $product->id }}" />
                                                         </tr>
                                                     @endforeach

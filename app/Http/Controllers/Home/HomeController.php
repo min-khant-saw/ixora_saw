@@ -16,13 +16,13 @@ class HomeController extends Controller
     {
         $latestProducts = Product::with('category')
             ->latest()
-            ->take(4)
+            ->take(2)
             ->get();
 
         $discountProducts = Product::with('category')
             ->where('discount', '>', 0)
             ->latest()
-            ->take(4)
+            ->take(2)
             ->get();
 
         return view('home', [

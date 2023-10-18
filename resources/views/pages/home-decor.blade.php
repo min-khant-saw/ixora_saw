@@ -11,8 +11,8 @@
                             $calc = $totalPrice * ($discountPrice / 100);
                             $resultPrice = $totalPrice - $calc;
                         @endphp
-                        <x-product id="{{ $homeDecor->id }}" category="{{ $homeDecor->category->title }}"
-                            price="{{ $homeDecor->price }}" title="{{ $homeDecor->title }}" image="{{ $homeDecor->image }}"
+                        <x-product class="w-80 h-80" id="{{ $homeDecor->id }}" category="{{ $homeDecor->category->title }}"
+                            price="{{ $homeDecor->price }}" title="{{ $homeDecor->title }}" image="{{ $homeDecor->imageOne }}"
                             discountPrice="{{ $homeDecor->discount }}" discount="{{ $resultPrice }}" />
                     @endforeach
 

@@ -17,7 +17,9 @@ return new class extends Migration {
             $table->string('title');
             $table->text('description');
             $table->integer('price');
-            $table->text('image');
+            $table->text('imageOne');
+            $table->text('imageTwo')->nullable();
+            $table->text('imageThree')->nullable();
             $table->integer('discount')->default(0);
             $table
                 ->foreign('category_id')

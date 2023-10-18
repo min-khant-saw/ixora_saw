@@ -34,7 +34,7 @@
                             @forelse ($products as $product)
                                 @if (!in_array($product->id, $productId))
                                     <x-cart ids="{{ $product->id }}" id="{{ $product->pivot->id }}"
-                                        title="{{ $product->title }}" image="{{ $product->image }}"
+                                        title="{{ $product->title }}" image="{{ $product->imageOne }}"
                                         category="{{ $product->category->title }}" price="{{ $product->price }}"
                                         discountPrice="{{ $product->discount }}" discount="{{ $resultPrice }}"
                                         totalProduct="{{ $productCounts[$product->id] }}"

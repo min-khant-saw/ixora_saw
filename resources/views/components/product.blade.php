@@ -1,4 +1,5 @@
-<div class="relative rounded product" style="width: 320px; height: 320px;">
+@props(['class' => 'relative', 'rounded', 'product'])
+<div {{ $attributes->merge(['class' => $class]) }}>
     <a href="{{ route('product', ['id' => $id]) }}" style="text-decoration: none">
         <div class="relative" style="width: 100%; height: 100%;">
             <img class="w-full" style="object-fit: cover; height: 100%" src="{{ asset('storage/' . $image) }}"
