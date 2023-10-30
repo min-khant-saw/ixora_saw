@@ -21,20 +21,26 @@ class ProductController extends Controller
             ->inRandomOrder();
     }
 
-    public function fashion(Request $request)
+    public function fashion(Request $request, string $type = null)
     {
         $fashions = Product::with('category')
-            ->whereHas('category', function ($query) {
+            ->whereHas('category', function ($query) use ($type) {
+                if (!is_null($type)) {
+                    $query->where('title', 'Fashion')->where('type', $type);
+                }
                 $query->where('title', 'Fashion');
             })
             ->paginate(20);
 
         return view('pages.fashion')->with('fashions', $fashions);
     }
-    public function accessories(Request $request)
+    public function accessories(Request $request, string $type = null)
     {
         $accessories = Product::with('category')
-            ->whereHas('category', function ($query) {
+            ->whereHas('category', function ($query) use ($type) {
+                if (!is_null($type)) {
+                    $query->where('title', 'Accessorie')->where('type', $type);
+                }
                 $query->where('title', 'Accessorie');
             })
             ->paginate(20);

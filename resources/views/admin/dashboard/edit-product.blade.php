@@ -37,7 +37,7 @@
                 </div>
                 <div>
                     <label class="" for="category">Categorys</label>
-                    <select name="category" id="category"
+                    <select name="category" id="category" onchange="change(event)"
                         class="block w-full px-4 py-2 mt-2 border-none focus:ring-2 focus:ring-red-600 rounded transition-all">
                         <option value="Fashion" @selected($product->category->title === 'Fashion' ? true : false)>
                             Fashion</option>
@@ -46,6 +46,7 @@
                         <option value="Education" @selected($product->category->title === 'Education' ? true : false)>Education</option>
                     </select>
                 </div>
+                <div class="sub-category"></div>
                 <div>
                     <label class="" for="description">Information</label>
                     <textarea id="textarea" type="textarea" name="description"
@@ -139,4 +140,76 @@
             </div>
         </form>
     </section>
+    <script>
+        const category = document.getElementById('category')
+        const subCategory = document.querySelector(".sub-category");
+
+        const select = document.createElement("select");
+        const lable = document.createElement("label");
+        select.classList =
+            "block w-full px-4 py-2 mt-2 border-none focus:ring-2 focus:ring-red-600 rounded transition-all";
+
+        select.name = "type";
+
+        select.id = "type";
+
+        lable.setAttribute("for", "type");
+        lable.textContent = "Product Type";
+
+        subCategory.append(lable, select);
+
+        options(category.value);
+
+        const change = (e) => {
+            let value = e.target.value;
+
+            return options(value);
+        };
+
+        function options(action) {
+            if (action === "Fashion" || !action) {
+                const optionOne = document.createElement("option");
+                const optionTwo = document.createElement("option");
+                select.classList.remove("hidden");
+                lable.classList.remove("hidden");
+                optionOne.value = "bags";
+                optionOne.textContent = "Bags";
+                optionTwo.value = "shawls";
+                optionTwo.textContent = "Shawls";
+
+                select.replaceChildren(optionOne, optionTwo);
+                if ("{{ $product->type }}" == 'bags') {
+                    return optionOne.selected = true
+                }
+                if ("{{ $product->type }}" == 'shawls') {
+                    return optionTwo.selected = true
+                }
+            }
+
+            if (action === "Accessorie") {
+                const optionOne = document.createElement("option");
+                const optionTwo = document.createElement("option");
+                select.classList.remove("hidden");
+                lable.classList.remove("hidden");
+                optionOne.value = "jewelry";
+                optionOne.textContent = "Jewelry";
+                optionTwo.value = "keychain";
+                optionTwo.textContent = "Keychain";
+
+                select.replaceChildren(optionOne, optionTwo);
+                if ("{{ $product->type }}" == 'jewelry') {
+                    return optionOne.selected = true
+                }
+                if ("{{ $product->type }}" == 'keychain') {
+                    return optionTwo.selected = true
+                }
+            }
+
+            if (action === "Home Decor" || action === "Education") {
+                select.classList.add("hidden");
+                lable.classList.add("hidden");
+                select.replaceChildren("");
+            }
+        }
+    </script>
 </x-admin.admin-layout>

@@ -30,6 +30,7 @@ class AddProductController extends Controller
             'imageTwo' => 'sometimes|mimes:jpg,png,jpeg|max:10240',
             'imageThree' => 'sometimes|mimes:jpg,png,jpeg|max:10240',
             'category' => 'required|string',
+            'type' => 'sometimes|string',
         ]);
 
         $data = $request->all();

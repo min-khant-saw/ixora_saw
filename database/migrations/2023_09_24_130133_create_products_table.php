@@ -21,6 +21,7 @@ return new class extends Migration {
             $table->text('imageTwo')->nullable();
             $table->text('imageThree')->nullable();
             $table->integer('discount')->default(0);
+            $table->string('type')->nullable();
             $table
                 ->foreign('category_id')
                 ->references('id')

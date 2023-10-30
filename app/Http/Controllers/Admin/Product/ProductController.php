@@ -127,6 +127,7 @@ class ProductController extends Controller
             'imageThree' => 'sometimes|mimes:jpg,png,jpeg|max:10240',
             'category' => 'string',
             'discount' => 'numeric|sometimes',
+            'type' => 'sometimes|string',
         ]);
 
         $data = $request->all();

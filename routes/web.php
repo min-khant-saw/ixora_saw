@@ -36,8 +36,8 @@ Route::prefix('/')->group(function () {
 
 Route::prefix('/product')->group(function () {
     Route::controller(ProductController::class)->group(function () {
-        Route::get('/fashion', 'fashion')->name('fashion');
-        Route::get('/accessories', 'accessories')->name('accessories');
+        Route::get('/fashion/{type?}', 'fashion')->name('fashion');
+        Route::get('/accessories/{type?}', 'accessories')->name('accessories');
         Route::get('/home-decor', 'homeDecor')->name('homeDecor');
         Route::get('/education', 'education')->name('education');
         Route::get('/sale', 'sale')->name('sale');
@@ -60,7 +60,7 @@ Route::middleware('auth')->group(function () {
     Route::group(
         [
             'controller' => CartController::class,
-            'prefix' => '/cart',
+            'prefix' => '/carts',
         ],
         function () {
             Route::get('/', 'index')->name('cart');

@@ -1,6 +1,23 @@
 <x-app-guest-layout>
     <div class="py-12">
-        <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
+    <div class="sm:px-6 lg:px-8 flex max-lg:flex-col flex-row justify-start gap-x-6">
+            @if ($homeDecors->count())
+                <div class="mb-8 flex justify-center flex-col gap-x-2 gap-y-5">
+                    <h1 class="text-xl font-semibold text-center">Product Type</h1>
+                    <div class="flex justify-center items-center gap-x-2">
+                        <input type="checkbox" name="kitchen" id="kitchen">
+                        <label for="kitchen">Kitchen</label>
+                    </div>
+                    <div class="flex justify-center items-center gap-x-2">
+                        <input type="checkbox" name="home-display" id="home-display">
+                        <label for="home-display">Home Display</label>
+                    </div>
+                    <div class="flex justify-center items-center gap-x-2">
+                        <input type="checkbox" name="wall-art" id="wall-art">
+                        <label for="wall-art">Wall art</label>
+                    </div>
+                </div>
+            @endif
             <div class="p-6 text-gray-900 flex justify-center">
                 <x-single-product>
 
