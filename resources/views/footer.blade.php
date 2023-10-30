@@ -27,7 +27,7 @@
             <form action="" class="flex justify-center max-lg:flex-col max-lg:gap-y-2">
                 <input type="text" placeholder="Email Address"
                     class="bg-white border-[#E6E6E6] focus:ring-1 focus:ring-black outline-none focus:outline-none w-full focus:border-black">
-                <button class="bg-[#606060] p-3 text-white text-sm font-semibold max-lg:p-1.5">SUSCRIBE</button>
+                <button class="bg-[#606060] p-3 text-white text-sm font-semibold max-lg:p-1.5">SUBSCRIBE</button>
             </form>
         </div>
     </div>
