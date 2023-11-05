@@ -1,6 +1,6 @@
 <footer class="p-2 flex justify-center flex-col gap-y-4 border-t">
     <div class="flex justify-between items-center px-4 max-lg:flex-col max-lg:items-start max-lg:gap-y-6">
-        <div class="w-52 h-12">
+        <div class="w-2 h-12">
             <img src="{{ URL::asset('images/IxoraSawLogo.png') }}" alt="" class="w-full h-full object-cover">
         </div>
         <div class="flex justify-center flex-col gap-y-2">
