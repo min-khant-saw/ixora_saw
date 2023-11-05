@@ -6,7 +6,7 @@
     <title>{{ config('app.name') }}</title>
 
     <!-- <link rel="stylesheet" href="{{ asset('mystyle.css') }}"> -->
-    <link rel="stylesheet" href="{{ asset('mstyle.css') }}?=asa">
+    <link rel="stylesheet" href="{{ asset('ms.css') }}">
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.bunny.net">

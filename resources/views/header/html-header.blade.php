@@ -12,7 +12,7 @@
 
         <title>{{ config('app.name') }}</title>
 
-        <link rel="stylesheet" href="{{ asset('mstyle.css') }}?=fdsafdsa">
+        <link rel="stylesheet" href="{{ asset('ms.css') }}">
 
 
         <!-- Fonts -->
