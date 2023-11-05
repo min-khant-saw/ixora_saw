@@ -16,7 +16,7 @@
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
-    <link rel="shortcut icon" href="{{ URL::asset('build/assets/images/Ixora-Saw-Logo-background.png') }}"
+    <link rel="shortcut icon" href="{{ URL::asset('images/Ixora-Saw-Logo-background.png') }}"
         type="image/x-icon">
     <!-- Scripts -->
     @vite(['resources/css/admin.css'])

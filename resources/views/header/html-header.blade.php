@@ -7,7 +7,7 @@
         <meta property="og:title" content="Ixora Saw">
         <meta property="og:description" content="Boutique. Sell handmade products.">
         <meta property="og:url" content="{{ url()->full() }}">
-        <meta property="og:image" content="{{ URL::asset('build/assets/images/Ixora-Saw-Logo-background.png') }}">
+        <meta property="og:image" content="{{ URL::asset('images/Ixora-Saw-Logo-background.png') }}">
 
 
         <title>{{ config('app.name') }}</title>
@@ -24,7 +24,7 @@
         <link rel="stylesheet"
             href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
         <!-- Scripts -->
-        <link rel="shortcut icon" href="{{ URL::asset('build/assets/images/Ixora-Saw-Logo-background.png') }}"
+        <link rel="shortcut icon" href="{{ URL::asset('images/Ixora-Saw-Logo-background.png') }}"
             type="image/x-icon">
 
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
