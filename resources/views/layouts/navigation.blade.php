@@ -72,9 +72,9 @@
                         {{ __('About') }}
                     </x-nav-link>
 
-                    <x-nav-link :href="route('sale')" :active="request()->routeIs('sale')" style="font-size: 1rem; text-decoration: none">
-                        {{ __('Sale') }}
-                    </x-nav-link>
+                    {{-- <x-nav-link :href="route('sale')" :active="request()->routeIs('sale')" style="font-size: 1rem; text-decoration: none">
+                         {{ __('Sale') }}
+                     </x-nav-link> --}}
                     <x-nav-link :href="route('contacts')" :active="request()->routeIs('contacts')" style="font-size: 1rem; text-decoration: none">
                         {{ __('Contacts') }}
                     </x-nav-link>
@@ -131,9 +131,9 @@
             <x-responsive-nav-link :href="route('about')" :active="request()->routeIs('about')" style="text-decoration: none">
                 {{ __('About') }}
             </x-responsive-nav-link>
-            <x-responsive-nav-link :href="route('sale')" :active="request()->routeIs('sale')" style="text-decoration: none">
-                {{ __('Sale') }}
-            </x-responsive-nav-link>
+           {{--  <x-responsive-nav-link :href="route('sale')" :active="request()->routeIs('sale')" style="text-decoration: none">
+                 {{ __('Sale') }}
+             </x-responsive-nav-link> --}}
             <x-responsive-nav-link :href="route('contacts')" :active="request()->routeIs('contacts')" style="text-decoration: none">
                 {{ __('Contacts') }}
             </x-responsive-nav-link>

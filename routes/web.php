@@ -73,5 +73,24 @@ Route::middleware('auth')->group(function () {
     );
 });
 
+
+
+Route::get('/shipping-and-return',function(){
+    return view('pages.shipping');
+})->name('shipping');
+
+Route::get('/term-and-condition',function(){
+    return view('pages.term');
+})->name('term');
+
+Route::get('/privacy-and-policy',function(){
+    return view('pages.privacy');
+})->name('privacy');
+
+Route::get('/term-of-service',function(){
+    return view('pages.service');
+})->name('service');
+
+
 require __DIR__ . '/auth.php';
 require __DIR__ . '/admin.php';

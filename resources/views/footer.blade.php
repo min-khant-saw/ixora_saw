@@ -5,19 +5,18 @@
         </div>
         <div class="flex justify-center flex-col gap-y-2">
             <p class="text-lg font-bold text-[#606060] max-lg:text-base">
-                Shipping and Return
+              <a href="{{ route('shipping') }}">Shipping and Return</a>
 
             </p>
             <p class="text-lg font-bold text-[#606060] max-lg:text-base">
-                Term and Condition
+               <a href="{{ route('term') }}">Term and Condition</a>
+            </p>
+            <p class="text-lg font-bold text-[#606060] max-lg:text-base">
+              <a href="{{ route('privacy') }}">Privacy and Policy</a>
 
             </p>
             <p class="text-lg font-bold text-[#606060] max-lg:text-base">
-                Privacy and Policy
-
-            </p>
-            <p class="text-lg font-bold text-[#606060] max-lg:text-base">
-                Term of Service
+              <a href="{{ route('service') }}">Term of service</a>
             </p>
 
         </div>
