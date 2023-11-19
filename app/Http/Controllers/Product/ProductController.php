@@ -15,10 +15,10 @@ class ProductController extends Controller
 
     public function home()
     {
-        $latestProduct = Product::with('category')
-            ->latest()
-            ->chunk(4)
-            ->inRandomOrder();
+        /* $latestProduct = Product::with('category') */
+        /*     ->latest() */
+        /*     ->chunk(4) */
+        /*     ->inRandomOrder(); */
     }
 
     public function fashion(Request $request, string $type = null)
@@ -31,7 +31,6 @@ class ProductController extends Controller
                 $query->where('title', 'Fashion');
             })
             ->paginate(20);
-
         return view('pages.fashion')->with('fashions', $fashions);
     }
     public function accessories(Request $request, string $type = null)

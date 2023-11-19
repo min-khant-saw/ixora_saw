@@ -56,11 +56,11 @@
                         {{ __('Fashion') }}
                     </x-nav-link>
 
-                    <x-nav-link :href="route('accessories')" :active="request()->routeIs('accessories')" style="font-size: 1rem; text-decoration: none">
+                    <x-nav-link :href="route('accessorie')" :active="request()->routeIs('accessorie')" style="font-size: 1rem; text-decoration: none">
                         {{ __('Acessories') }}
                     </x-nav-link>
 
-                    <x-nav-link :href="route('homeDecor')" :active="request()->routeIs('homeDecor')" style="font-size: 1rem; text-decoration: none">
+                    <x-nav-link :href="route('home decor')" :active="request()->routeIs('home decor')" style="font-size: 1rem; text-decoration: none">
                         {{ __('Home Decor') }}
                     </x-nav-link>
 
@@ -116,11 +116,11 @@
                 {{ __('Fashion') }}
             </x-responsive-nav-link>
 
-            <x-responsive-nav-link :href="route('accessories')" :active="request()->routeIs('accessories')" style="text-decoration: none">
+            <x-responsive-nav-link :href="route('accessorie')" :active="request()->routeIs('accessorie')" style="text-decoration: none">
                 {{ __('Accessories') }}
             </x-responsive-nav-link>
 
-            <x-responsive-nav-link :href="route('homeDecor')" :active="request()->routeIs('homeDecor')" style="text-decoration: none">
+            <x-responsive-nav-link :href="route('home decor')" :active="request()->routeIs('home decor')" style="text-decoration: none">
                 {{ __('Home Decor') }}
             </x-responsive-nav-link>
 

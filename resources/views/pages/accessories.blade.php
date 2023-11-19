@@ -4,22 +4,22 @@
             @if ($accessories->count())
                 <div class="mb-8 flex justify-center flex-col gap-x-2 gap-y-5">
                     <h1 class="text-xl font-semibold text-center">Product Type</h1>
-                    <a class="flex justify-center items-center gap-x-2" href="{{ route('accessories') }}">
-                        <input type="radio" {{ url()->current() === route('accessories') ? 'checked' : '' }}
+                    <a class="flex justify-center items-center gap-x-2" href="{{ route('accessorie') }}">
+                        <input type="radio" {{ url()->current() === route('accessorie') ? 'checked' : '' }}
                             name="type" id="all" onclick="fashion()">
                         <label for="all">All Accessories</label>
                     </a>
                     <a class="flex justify-center items-center gap-x-2"
-                        href="{{ route('accessories', ['type' => 'jewelry']) }}">
+                        href="{{ route('accessorie', ['type' => 'jewelry']) }}">
                         <input type="radio"
-                            {{ url()->current() === route('accessories', ['type' => 'jewelry']) ? 'checked' : '' }}
+                            {{ url()->current() === route('accessorie', ['type' => 'jewelry']) ? 'checked' : '' }}
                             name="type" id="jewelry" onclick="jewelry()">
                         <label for="jewelry">Jewelry</label>
                     </a>
 
                     <div class="flex justify-center items-center gap-x-2">
                         <input type="radio" name="type" id="keychain" onclick="keychain()"
-                            {{ url()->current() === route('accessories', ['type' => 'keychain']) ? 'checked' : '' }}>
+                            {{ url()->current() === route('accessorie', ['type' => 'keychain']) ? 'checked' : '' }}>
                         <label for="keychain">Keychain</label>
                     </div>
                 </div>
@@ -50,16 +50,16 @@
     </x-pagination>
     <script>
         const jewelry = () => {
-            window.location.href = "{{ route('accessories', ['type' => 'jewelry']) }}"
+            window.location.href = "{{ route('accessorie', ['type' => 'jewelry']) }}"
         }
 
         const keychain = () => {
-            window.location.href = "{{ route('accessories', ['type' => 'keychain']) }}"
+            window.location.href = "{{ route('accessorie', ['type' => 'keychain']) }}"
         }
 
         const fashion = () => {
 
-            window.location.href = "{{ route('accessories') }}"
+            window.location.href = "{{ route('accessorie') }}"
         }
     </script>
 </x-app-guest-layout>

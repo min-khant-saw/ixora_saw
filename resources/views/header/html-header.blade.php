@@ -12,7 +12,7 @@
 
         <title>{{ config('app.name') }}</title>
 
-        <link rel="stylesheet" href="{{ asset('s.css') }}">
+        <link rel="stylesheet" href="{{ asset('e.css') }}">
 
 
         <!-- Fonts -->

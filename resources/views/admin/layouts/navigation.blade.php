@@ -13,7 +13,7 @@
                 </span>
             </div>
             <ul
-                class="flex flex-col gap-4 text-base justify-center {{ request()->routeIs('admin.dashboard') || request()->routeIs('admin.product') || request()->routeIs('admin.order') || request()->routeIs('admin.add.product') ? 'opacity-100 visible h-[210px]' : 'opacity-0 invisible h-0' }} dashboard transition-all ease-in-out duration-300 overflow-hidden">
+                class="flex flex-col gap-4 text-base justify-center {{ request()->routeIs('admin.dashboard') || request()->routeIs('admin.product') || request()->routeIs('admin.order') || request()->routeIs('admin.add.product') || request()->routeIs('admin.category.admin') ? 'opacity-100 visible h-[250px]' : 'opacity-0 invisible h-0' }} dashboard transition-all ease-in-out duration-300 overflow-hidden">
                 <a href="{{ route('admin.dashboard') }}">
                     <li class="flex items-center ml-4 pt-3 {{ request()->routeIs('admin.dashboard') ? 'pl-3' : '' }}">
                         <span class="material-symbols-rounded text-2xl mr-2">
@@ -51,6 +51,17 @@
                         <span
                             class="text-md {{ request()->routeIs('admin.add.product') ? 'text-red-800 font-semibold' : '' }}">Add
                             Product</span>
+                    </li>
+                </a>
+
+                <a href="{{ route('admin.category.admin') }}">
+                    <li
+                        class="flex items-center ml-4 pb-1 {{ request()->routeIs('admin.category.admin') ? 'pl-3' : '' }}">
+                        <span class="material-symbols-rounded text-2xl mr-2">
+                            grid_view
+                        </span>
+                        <span
+                            class="text-md {{ request()->routeIs('admin.category.admin') ? 'text-red-800 font-semibold' : '' }}">Create Categories</span>
                     </li>
                 </a>
 

@@ -97,6 +97,10 @@ swiper-slide img {
     } */
 }
 
+/* .head-image > p { */
+/*     display: none !important; */
+/* } */
+
 .single-product-container {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));

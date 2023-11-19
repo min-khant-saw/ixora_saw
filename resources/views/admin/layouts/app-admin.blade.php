@@ -29,7 +29,7 @@
 
         dashboardContainer.addEventListener('click', () => {
             if (!dashboard.offsetHeight) {
-                dashboard.style.height = '210px'
+                dashboard.style.height = '250px'
                 dashboard.style.opacity = '1'
                 dashboard.style.visibility = 'visible'
                 return

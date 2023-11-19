@@ -7,6 +7,7 @@ use App\Http\Controllers\Admin\Dashboard\HomeController;
 use App\Http\Controllers\Admin\Order\OrderController;
 use App\Http\Controllers\Admin\Product\ProductController;
 use App\Http\Controllers\Admin\User\UserController;
+use App\Http\Controllers\Admin\Categories\CategoryController;
 
 Route::prefix('admin')->group(function () {
     Route::controller(LoginController::class)
@@ -20,6 +21,10 @@ Route::prefix('admin')->group(function () {
         ->middleware('admin.auth')
         ->name('admin.')
         ->group(function () {
+            Route::controller(CategoryController::class)->group(function (){
+                Route::get('/category','adminIndex')->name('category.admin');
+                Route::post('/new-category','create')->name('category.create');
+            });
             Route::get('/', [HomeController::class, 'index'])->name(
                 'dashboard'
             );

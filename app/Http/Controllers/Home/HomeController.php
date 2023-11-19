@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Home;
 
 use App\Http\Controllers\Controller;
 use App\Models\Product;
+use App\Models\TitleCategory;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
@@ -25,9 +26,12 @@ class HomeController extends Controller
             ->take(2)
             ->get();
 
+        $category = TitleCategory::all();
+
         return view('home', [
             'latest' => $latestProducts,
             'discount' => $discountProducts,
+            'category' => $category,
         ]);
     }
 }

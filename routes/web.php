@@ -37,8 +37,8 @@ Route::prefix('/')->group(function () {
 Route::prefix('/product')->group(function () {
     Route::controller(ProductController::class)->group(function () {
         Route::get('/fashion/{type?}', 'fashion')->name('fashion');
-        Route::get('/accessories/{type?}', 'accessories')->name('accessories');
-        Route::get('/home-decor', 'homeDecor')->name('homeDecor');
+        Route::get('/accessories/{type?}', 'accessories')->name('accessorie');
+        Route::get('/home-decor', 'homeDecor')->name('home decor');
         Route::get('/education', 'education')->name('education');
         Route::get('/sale', 'sale')->name('sale');
         Route::get('/id={id}', 'singleProduct')->name('product');
@@ -73,24 +73,21 @@ Route::middleware('auth')->group(function () {
     );
 });
 
-
-
-Route::get('/shipping-and-return',function(){
+Route::get('/shipping-and-return', function () {
     return view('pages.shipping');
 })->name('shipping');
 
-Route::get('/term-and-condition',function(){
+Route::get('/term-and-condition', function () {
     return view('pages.term');
 })->name('term');
 
-Route::get('/privacy-and-policy',function(){
+Route::get('/privacy-and-policy', function () {
     return view('pages.privacy');
 })->name('privacy');
 
-Route::get('/term-of-service',function(){
+Route::get('/term-of-service', function () {
     return view('pages.service');
 })->name('service');
-
 
 require __DIR__ . '/auth.php';
 require __DIR__ . '/admin.php';

@@ -5,6 +5,7 @@
         </h2>
     </x-slot> --}}
 
+
     @include('pages.components.header')
     @include('pages.components.categories')
     @include('pages.components.new-product')

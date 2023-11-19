@@ -18,7 +18,7 @@ class Product extends Component
     /**
      * Create a new component instance.
      */
-    public function __construct($image, $title, $price, $category, $id, $discount = 0, $discountPrice = 0)
+    public function __construct($image, $title = "", $price = "", $category = "", $id, $discount = 0, $discountPrice = 0)
     {
         $this->image = $image;
         $this->title = $title;
