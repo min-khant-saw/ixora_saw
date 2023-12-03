@@ -102,13 +102,19 @@ class ProductController extends Controller
     public function delete($id)
     {
         $deleteFashion = Product::find($id);
-
-        Storage::disk('public')->delete($deleteFashion->image);
-
-        $deleteFashion->delete();
-
+    
+        if ($deleteFashion) {
+            // Check if the image property is not null before attempting to delete
+            if ($deleteFashion->image) {
+                Storage::disk('public')->delete($deleteFashion->image);
+            }
+    
+            $deleteFashion->delete();
+        }
+    
         return redirect()->route('admin.product');
     }
+    
     public function edit($id)
     {
         $product = Product::with('category')->find($id);
